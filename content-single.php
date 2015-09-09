@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for displaying content of single post.
+ *
  * @package Simple Life
  */
 
@@ -15,7 +17,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
- 		<?php if ( has_post_thumbnail()) : ?>
+ 		<?php if ( has_post_thumbnail() ) : ?>
  			<div class="post-thumbnail-wrapper">
 				<?php the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) ); ?>
  			</div>
@@ -33,10 +35,10 @@
 	<footer class="entry-footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'simple-life' ) );
+			$category_list = get_the_category_list( esc_html__( ', ', 'simple-life' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'simple-life' ) );
+			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 
 			if ( ! empty( $category_list ) ) {
 				echo '<span class="sl-category"><i class="fa fa-folder-open"></i> '.$category_list.'</span>';

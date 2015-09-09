@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for displaying content in loop.
+ *
  * @package Simple Life
  */
 
@@ -43,7 +45,7 @@
            ?>
 
 					<div class="entry-summary entry-summary-with-thumbnail">
-				 		<?php if ( has_post_thumbnail()) : ?>
+				 		<?php if ( has_post_thumbnail() ) : ?>
 			 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 			 					<?php the_post_thumbnail( $archive_image_thumbnail_size, array( 'class' => 'align' . $archive_image_alignment ) ); ?>
 			 				</a>
@@ -59,7 +61,7 @@
             $archive_image_alignment = esc_attr( simple_life_get_option( 'archive_image_alignment' ) );
            ?>
 					<div class="entry-content">
-						<?php if ( has_post_thumbnail()) : ?>
+						<?php if ( has_post_thumbnail() ) : ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 								<?php the_post_thumbnail( $archive_image_thumbnail_size, array( 'class' => 'align' . $archive_image_alignment ) ); ?>
 							</a>
@@ -80,9 +82,9 @@
 
 
 	<footer class="entry-footer">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search. ?>
 			<?php
-				/* translators: used between list items, there is a space after the comma */
+				/* Translators: used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( esc_html__( ', ', 'simple-life' ) );
 				if ( $categories_list && simple_life_categorized_blog() ) :
 			?>
@@ -93,7 +95,7 @@
 			<?php endif; // End if categories ?>
 
 			<?php
-				/* translators: used between list items, there is a space after the comma */
+				/* Translators: used between list items, there is a space after the comma. */
 				$tags_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 				if ( $tags_list ) :
 			?>
