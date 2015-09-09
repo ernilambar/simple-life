@@ -1,0 +1,27 @@
+@media only screen and (max-width:767px) {
+
+  #secondary{
+    clear: both;
+  }
+
+}
+
+@media only screen and (max-width:640px) {
+
+  header#masthead{
+    padding-top:40px;
+  }
+  .site-branding{
+    margin:0 5px;
+  }
+
+}
+
+@media only screen and (max-width:360px) {
+
+  .entry-header h2 {
+      max-width: 80%;
+      width: 80%;
+  }
+
+}
