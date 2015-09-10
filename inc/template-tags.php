@@ -159,11 +159,11 @@ add_action( 'edit_category', 'simple_life_category_transient_flusher' );
 add_action( 'save_post',     'simple_life_category_transient_flusher' );
 
 
-/**
- * Add post format icons
- */
 if ( ! function_exists('simple_life_post_format_icon')) :
 
+	/**
+	 * Add post format icons.
+	 */
 	function simple_life_post_format_icon(){
 
 		$current_post_format = get_post_format();
