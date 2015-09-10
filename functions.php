@@ -117,6 +117,10 @@ function simple_life_scripts() {
 	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri() );
   wp_enqueue_style( 'simple-life-style-responsive', get_template_directory_uri().'/css/responsive.css', false , '1.0.1' );
 
+  // Load the html5 shiv.
+  wp_enqueue_script( 'simple-life-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
+  wp_script_add_data( 'simple-life-html5', 'conditional', 'lt IE 9' );
+
 	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu.js', array( 'jquery' ), '2.0.6', true );
 	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'simple-life-meanmenu-script' ), '1.0.1', true );
 
