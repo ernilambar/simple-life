@@ -2,6 +2,7 @@
     "preset": "wordpress",
     "fileExtensions": [ ".js" ],
     "excludeFiles": [
-    	"js/html5.js"
+    	"js/html5.js",
+    	"third-party/meanmenu/jquery.meanmenu.js"
     ]
 }
