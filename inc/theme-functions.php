@@ -2,7 +2,7 @@
 /**
  * Custom theme functions.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 if ( ! function_exists( 'simple_life_get_option' ) ) :

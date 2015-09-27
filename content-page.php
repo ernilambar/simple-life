@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 ?>

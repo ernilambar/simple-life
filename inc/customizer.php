@@ -2,7 +2,7 @@
 /**
  * Simple Life Theme Customizer
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 /**

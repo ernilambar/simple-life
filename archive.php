@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

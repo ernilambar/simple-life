@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

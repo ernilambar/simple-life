@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget areas.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 ?>

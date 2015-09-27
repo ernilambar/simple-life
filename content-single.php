@@ -2,7 +2,7 @@
 /**
  * The template part for displaying content of single post.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 ?>

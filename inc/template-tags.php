@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 if ( ! function_exists( 'simple_life_paging_nav' ) ) :

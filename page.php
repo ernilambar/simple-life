@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

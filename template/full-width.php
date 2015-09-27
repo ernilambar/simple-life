@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

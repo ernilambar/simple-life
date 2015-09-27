@@ -2,7 +2,7 @@
 /**
  * Theme helper functions.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 if ( ! function_exists( 'simple_life_get_image_alignment_options' ) ) :

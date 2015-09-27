@@ -2,7 +2,7 @@
 /**
  * Implement WooCommerce support.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 add_theme_support( 'woocommerce' );

@@ -2,7 +2,7 @@
 /**
  * The template part for displaying content in loop.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 ?>

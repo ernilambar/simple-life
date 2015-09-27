@@ -2,7 +2,7 @@
 /**
  * Template Name: Content-Sidebar
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>

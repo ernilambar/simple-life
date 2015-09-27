@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Simple Life
+ * @package Simple_Life
  */
 
 get_header(); ?>
