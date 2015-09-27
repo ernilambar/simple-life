@@ -66,6 +66,13 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 	}
 endif;
 
+/**
+ * Render content class.
+ *
+ * @since 1.0.0
+ *
+ * @param  string|array $class Class to be added.
+ */
 function simple_life_content_class( $class = '' ) {
 
 	$classes = array();
@@ -80,9 +87,17 @@ function simple_life_content_class( $class = '' ) {
 
 	$classes = array_map( 'esc_attr', $classes );
 	$classes = apply_filters( 'simple_life_filter_content_class', $classes, $class );
-	echo 'class="' . join( ' ', $classes ) . '"';
+	echo 'class="' . join( ' ', $classes ) . '"'; // WPCS: XSS OK.
 
 }
+
+/**
+ * Render sidebar class.
+ *
+ * @since 1.0.0
+ *
+ * @param  string|array $class Class to be added.
+ */
 function simple_life_sidebar_class( $class = '' ) {
 
 	$classes = array();
@@ -97,19 +112,26 @@ function simple_life_sidebar_class( $class = '' ) {
 
 	$classes = array_map( 'esc_attr', $classes );
 	$classes = apply_filters( 'simple_life_filter_sidebar_class', $classes, $class );
-	echo 'class="' . join( ' ', $classes ) . '"';
+	echo 'class="' . join( ' ', $classes ) . '"'; // WPCS: XSS OK.
 }
 
 if ( ! function_exists( 'simple_life_footer_widgets' ) ) :
+	/**
+	 * Render footer widgets.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  array $args Arguments for footer widgets.
+	 */
 	function simple_life_footer_widgets( $args = array() ) {
 
 		$flag_apply_footer_widgets_content = apply_filters( 'simple_life_filter_footer_widgets_content', true );
-		if ( true != $flag_apply_footer_widgets_content ) {
+		if ( true !== $flag_apply_footer_widgets_content ) {
 			return false;
 		}
 
 		$footer_widgets = simple_life_get_option( 'footer_widgets' );
-		if (  0 == $footer_widgets  ) {
+		if (  0 === $footer_widgets  ) {
 			return;
 		}
 		$number_of_footer_widgets = $footer_widgets;
@@ -142,22 +164,22 @@ if ( ! function_exists( 'simple_life_footer_widgets' ) ) :
 			);
 		}
 
-		echo $container_open;
+		echo $container_open; // WPCS: XSS OK.
 
-		echo $args['before'];
+		echo $args['before']; // WPCS: XSS OK.
 
 		for ( $i = 1; $i <= $number_of_footer_widgets ;$i++ ) {
 			$item_class = apply_filters( 'simple_life_filter_footer_widget_class', '', $i );
 			$div_classes = implode( ' ', array( $args['wrap_class'], $item_class ) );
-			echo '<div class="' . $div_classes .  '">';
-			$sidebar_name = ( 1 == $i ) ? 'footer-sidebar' : "footer-sidebar-$i" ;
+			echo '<div class="' . $div_classes .  '">'; // WPCS: XSS OK.
+			$sidebar_name = ( 1 === $i ) ? 'footer-sidebar' : "footer-sidebar-$i" ;
 			dynamic_sidebar( $sidebar_name );
-			echo '</div><!-- .' . $args['wrap_class'] . ' -->';
+			echo '</div><!-- .' . $args['wrap_class'] . ' -->'; // WPCS: XSS OK.
 		} // end for loop
 
-		echo $args['after'];
+		echo $args['after']; // WPCS: XSS OK.
 
-		echo $container_close;
+		echo $container_close; // WPCS: XSS OK.
 
 	} // End function simple_life_footer_widgets.
 endif;
