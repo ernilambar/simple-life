@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple Life functions and definitions
+ * Simple Life functions and definitions.
  *
  * @package Simple_Life
  */
