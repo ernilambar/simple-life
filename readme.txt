@@ -1,15 +1,9 @@
 = Simple Life =
 * by the Nilambar Sharma, http://www.nilambar.net/
+* See http://www.nilambar.net/2015/03/simple-life-free-wordpress-theme.html
 
-== ABOUT Simple Life ==
+== About ==
 Simple Life is a simple and minimal theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. Built on HTML5, CSS3, it has a responsive design which lets the content automatically adapt to the screen's size on different devices. This theme is easily customizable with the Customizer feature of WordPress. It supports popular plugins such as WP-PageNavi, Contact Form 7, WooCommerce and many more. It is also translation ready. If you need support with this theme, please go to http://wordpress.org/support/theme/simple-life
-
-== Navigation ==
-- Two menu positions are available. One is 'Primary Menu'. This one is for header menu.
-- Another menu 'Footer Menu' is for the footer area.
-
-== Translation ==
-Simple Life theme is translation ready.
 
 == License ==
 Simple Life is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
@@ -23,6 +17,3 @@ The exceptions to license are as follows:
 - Font Awesome is fully open source and is GPL friendly (http://fortawesome.github.io/Font-Awesome/)
 - jquery.meanmenu.js released by Chris Wharton (https://github.com/meanthemes/meanMenu) under GPLv3 license
 - Open Sans Google Font - Apache License, version 2.0
-
-== Tags ==
-light, white, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, translation-ready, responsive-layout

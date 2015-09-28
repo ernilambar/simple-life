@@ -1,3 +1,8 @@
+Version 1.1.1
+* Update: Implement new archive functions
+* Update: Coding as per WordPress Coding Standard
+* Fix: Minor CSS fixes
+
 Version 1.1
 * Update: Font Awesome to latest version
 * Update: Bootstrap to latest version
