@@ -60,7 +60,9 @@ endif;
 
 if ( ! function_exists( 'simple_life_post_nav' ) ) :
 	/**
-	 * Display navigation to next/previous post when applicable.
+   * Display navigation to next/previous post when applicable.
+   *
+	 * @deprecated 1.2 Use the_post_navigation()
 	 */
 	function simple_life_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
@@ -75,8 +77,8 @@ if ( ! function_exists( 'simple_life_post_nav' ) ) :
 		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'simple-life' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous"><i class="fa fa-chevron-left"></i> %link</div>', _x( '%title', 'Previous post link', 'simple-life' ) );
-				next_post_link( '<div class="nav-next">%link <i class="fa fa-chevron-right"></i></div>',     _x( '%title', 'Next post link',     'simple-life' ) );
+				previous_post_link( '<div class="nav-previous"><i class="fa fa-chevron-left"></i> %link</div>', '%title' );
+				next_post_link( '<div class="nav-next">%link <i class="fa fa-chevron-right"></i></div>', '%title' );
 			?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
@@ -102,12 +104,12 @@ if ( ! function_exists( 'simple_life_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			_x( '%s', 'post date', 'simple-life' ),
+			'%s',
 			'<i class="fa fa-calendar"></i> <a href="' . esc_url( get_day_link( get_post_time( 'Y' ), get_post_time( 'm' ), get_post_time( 'j' ) ) ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			'<i class="fa fa-user"></i> '._x( '%s', 'post author', 'simple-life' ),
+			'<i class="fa fa-user"></i> %s',
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 

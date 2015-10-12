@@ -15,10 +15,10 @@ if ( ! function_exists( 'simple_life_get_image_alignment_options' ) ) :
 	function simple_life_get_image_alignment_options() {
 
 		$choices = array(
-		'none'   => __( 'None', 'simple-life' ),
-		'left'   => __( 'Left', 'simple-life' ),
-		'center' => __( 'Center', 'simple-life' ),
-		'right'  => __( 'Right', 'simple-life' ),
+		'none'   => _x( 'None', 'Alignment', 'simple-life' ),
+		'left'   => _x( 'Left', 'Alignment', 'simple-life' ),
+		'center' => _x( 'Center', 'Alignment', 'simple-life' ),
+		'right'  => _x( 'Right', 'Alignment', 'simple-life' ),
 		);
 		return $choices;
 
@@ -46,7 +46,7 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 		foreach ( array( 'thumbnail', 'medium', 'large' ) as $key => $_size ) {
 			$choices[ $_size ] = $_size . ' ('. get_option( $_size . '_size_w' ) . 'x' . get_option( $_size . '_size_h' ) . ')';
 		}
-		$choices['full'] = __( 'full (original)', 'simple-life' );
+		$choices['full'] = _x( 'full (original)', 'image size', 'simple-life' );
 		if ( ! empty( $_wp_additional_image_sizes ) && is_array( $_wp_additional_image_sizes ) ) {
 
 			foreach ( $_wp_additional_image_sizes as $key => $size ) {

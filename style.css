@@ -719,6 +719,7 @@ h2 a:hover, h3 a:hover {
   font-size: 20px;
 }
 .site-main .paging-navigation,
+.site-main .post-navigation,
 nav.pagination {
     background-color: #ffffff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);

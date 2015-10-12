@@ -89,7 +89,7 @@
 			?>
 			<span class="cat-links">
 			<i class="fa fa-folder-open"></i>
-			<?php printf( esc_html__( '%1$s', 'simple-life' ), $categories_list ); ?>
+			<?php printf( '%1$s', $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories. ?>
 
@@ -100,7 +100,7 @@
 			?>
 			<span class="tags-links">
 			<i class="fa fa-tags"></i>
-			<?php printf( '<span>&nbsp;' . esc_html__( '%1$s', 'simple-life' )  . '</span>', $tags_list ); ?>
+			<?php printf( '<span>&nbsp;%1$s</span>', $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list. ?>
 		<?php endif; // End if 'post' == get_post_type(). ?>
