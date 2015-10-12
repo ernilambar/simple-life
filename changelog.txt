@@ -1,3 +1,6 @@
+Version 1.2.1
+* Remove: Delete unnecessary file
+
 Version 1.2
 * Fix: Some duplicate strings
 * Fix: Minor CSS fixes
