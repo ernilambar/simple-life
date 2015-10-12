@@ -52,7 +52,7 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 		'archive_image_thumbnail_size' => 'large',
 		'archive_image_alignment'      => 'center',
 		'read_more_text'               => esc_html__( 'Read more', 'simple-life' ),
-		'search_placeholder'           => esc_html__( 'Search ...', 'simple-life' ),
+		'search_placeholder'           => esc_html__( 'Search...', 'simple-life' ),
 		'excerpt_length'               => 40,
 		'pagination_type'              => 'default',
 		'footer_widgets'               => 0,
