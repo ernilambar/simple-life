@@ -35,7 +35,7 @@
 				<i class="fa fa-folder-open"></i>
 				<?php printf( '%1$s', $categories_list ); ?>
 			</span>
-			<?php endif; // End if categories ?>
+			<?php endif; // End if categories. ?>
 
 			<?php
 				/* Translators: used between list items, there is a space after the comma. */
