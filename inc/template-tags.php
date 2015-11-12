@@ -60,8 +60,8 @@ endif;
 
 if ( ! function_exists( 'simple_life_post_nav' ) ) :
 	/**
-   * Display navigation to next/previous post when applicable.
-   *
+	 * Display navigation to next/previous post when applicable.
+	 *
 	 * @deprecated 1.2 Use the_post_navigation()
 	 */
 	function simple_life_post_nav() {

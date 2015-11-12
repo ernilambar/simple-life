@@ -4,6 +4,7 @@
  *
  * @package Simple_Life
  */
+
 ?>
 <form role="search" method="get" id="searchform" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
   <div>

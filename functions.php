@@ -81,10 +81,10 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 			'simple_life_custom_background_args', array(
 				'default-color' => 'f0f3f5',
 				'default-image' => '',
-		) ) );
+			) ) );
 
-		global $simple_life_default_options;
-		$simple_life_default_options = simple_life_get_theme_option_defaults();
+			global $simple_life_default_options;
+			$simple_life_default_options = simple_life_get_theme_option_defaults();
 
 	}
 endif;
