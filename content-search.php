@@ -49,7 +49,7 @@
 			<?php endif; // End if $tags_list. ?>
 		<?php endif; // End if 'post' == get_post_type(). ?>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+		<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
 		<span class="comments-link"><i class="fa fa-comment"></i>&nbsp;<?php comments_popup_link( esc_html__( 'Leave a comment', 'simple-life' ), esc_html__( '1 Comment', 'simple-life' ), esc_html__( '% Comments', 'simple-life' ) ); ?></span>
 		<?php endif; ?>
 

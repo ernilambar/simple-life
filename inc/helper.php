@@ -31,7 +31,7 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	/**
 	 * Returns image sizes options.
 	 *
-	 * @since Simple Life 2.0
+	 * @since Simple Life 1.2
 	 *
 	 * @param bool $add_disable Add whether disable option or not.
 	 */

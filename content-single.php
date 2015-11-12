@@ -41,10 +41,10 @@
 			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 
 			if ( ! empty( $category_list ) ) {
-				echo '<span class="sl-category"><i class="fa fa-folder-open"></i> '.$category_list.'</span>';
+				echo '<span class="sl-category"><i class="fa fa-folder-open"></i> ' . $category_list . '</span>';
 			}
 			if ( ! empty( $tag_list ) ) {
-				echo '<span class="sl-tags"><i class="fa fa-tags"></i> '.$tag_list.'</span>';
+				echo '<span class="sl-tags"><i class="fa fa-tags"></i> ' . $tag_list . '</span>';
 			}
 
 		?>

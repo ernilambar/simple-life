@@ -77,9 +77,10 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 		) );
 
 		// Setup the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'simple_life_custom_background_args', array(
-			'default-color' => 'f0f3f5',
-			'default-image' => '',
+		add_theme_support( 'custom-background', apply_filters(
+			'simple_life_custom_background_args', array(
+				'default-color' => 'f0f3f5',
+				'default-image' => '',
 		) ) );
 
 		global $simple_life_default_options;
