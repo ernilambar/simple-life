@@ -264,3 +264,25 @@ if ( ! function_exists( 'simple_life_add_go_to_top' ) ) :
 	}
 endif;
 add_action( 'wp_footer', 'simple_life_add_go_to_top' );
+
+if ( ! function_exists( 'simple_life_custom_content_width' ) ) :
+
+	/**
+	 * Custom content width.
+	 *
+	 * @since 1.3
+	 */
+	function simple_life_custom_content_width() {
+
+		global $post, $content_width;
+		if ( is_page() ) {
+			if ( is_page_template( 'template/full-width.php' ) ) {
+				$content_width = 1128;
+			} elseif ( is_page_template( array( 'template/content-sidebar.php', 'template/sidebar-content.php' ) ) ) {
+				$content_width = 800;
+			}
+		}
+	}
+endif;
+
+add_filter( 'template_redirect', 'simple_life_custom_content_width' );
