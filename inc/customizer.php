@@ -286,7 +286,6 @@ function simple_life_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control('simple_life_options[pagination_type]', array(
 		  'label'       => __( 'Pagination Type', 'simple-life' ),
-		  'description' => sprintf( __( 'Numeric: Requires %sWP-PageNavi%s plugin', 'simple-life' ), '<a href="https://wordpress.org/plugins/wp-pagenavi/" target="_blank">','</a>' ),
 		  'section'     => 'simple_life_options_pagination',
 		  'type'        => 'select',
 		  'priority'    => 220,

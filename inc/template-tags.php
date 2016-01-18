@@ -25,64 +25,24 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 				} else {
 					the_posts_pagination( array(
 						'mid_size'           => 2,
-						'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> '.__( 'Previous page', 'simple-life' ),
-						'next_text'          => __( 'Next page', 'simple-life' ). ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>',
+						'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> ' . __( 'Previous page', 'simple-life' ),
+						'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>',
 						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'simple-life' ) . ' </span>',
 					) );
 				}
-		  break;
+				break;
 
 			case 'default':
-				?>
-				  <nav class="navigation paging-navigation" role="navigation">
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'simple-life' ); ?></h1>
-			<div class="nav-links">
-
-			<?php if ( get_next_posts_link() ) : ?>
-          <div class="nav-previous"><?php next_posts_link( '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> ' . __( 'Older posts', 'simple-life' ) ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( get_previous_posts_link() ) : ?>
-          <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>' ); ?></div>
-			<?php endif; ?>
-
-			</div><!-- .nav-links -->
-			  </nav><!-- .navigation -->
-			<?php
-		  break;
+				the_posts_navigation( array(
+					'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> ' . __( 'Older posts', 'simple-life' ),
+					'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>',
+					) );
+				break;
 
 			default:
-		  break;
+				break;
 		}
 
-	}
-endif;
-
-if ( ! function_exists( 'simple_life_post_nav' ) ) :
-	/**
-	 * Display navigation to next/previous post when applicable.
-	 *
-	 * @deprecated 1.2 Use the_post_navigation()
-	 */
-	function simple_life_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
-
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
-		<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'simple-life' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous"><i class="fa fa-chevron-left"></i> %link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link <i class="fa fa-chevron-right"></i></div>', '%title' );
-			?>
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-		<?php
 	}
 endif;
 
