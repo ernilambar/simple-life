@@ -1,19 +1,67 @@
-= Simple Life =
-* by the Nilambar Sharma, http://www.nilambar.net/
-* See http://www.nilambar.net/2015/03/simple-life-free-wordpress-theme.html
-
-== About ==
-Simple Life is a simple and minimal theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. Built on HTML5, CSS3, it has a responsive design which lets the content automatically adapt to the screen's size on different devices. This theme is easily customizable with the Customizer feature of WordPress. It supports popular plugins such as WP-PageNavi, Contact Form 7, WooCommerce and many more. It is also translation ready. If you need support with this theme, please go to http://wordpress.org/support/theme/simple-life
-
-== License ==
-Simple Life is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3, see file license.txt
+=== Simple Life ===
+Contributors: rabmalin
+Tags: light, white, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, translation-ready, responsive-layout
+Requires at least: 4.2
+Tested up to: 4.4
+Stable tag: 1.3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Simple Life WordPress Theme, Copyright 2013 nilambar.net
-Simple Life is distributed under the terms of the GNU General Public License v3
-- The image used in screenshot of the theme is theme's author personal creation and is free for personal and commercial use.
-The exceptions to license are as follows:
-- Font Awesome is fully open source and is GPL friendly (http://fortawesome.github.io/Font-Awesome/)
-- jquery.meanmenu.js released by Chris Wharton (https://github.com/meanthemes/meanMenu) under GPLv3 license
-- Open Sans Google Font - Apache License, version 2.0
+
+Simple and minimal WordPress theme.
+
+== Description ==
+Simple Life is a simple and minimal theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. Built on HTML5, CSS3, it has a responsive design which lets the content automatically adapt to the screen's size on different devices. This theme is easily customizable with the Customizer feature of WordPress. It supports popular plugins such as WP-PageNavi, Contact Form 7, WooCommerce and many more. It is also translation ready. If you need support with this theme, please go to http://wordpress.org/support/theme/simple-life
+
+== Frequently Asked Questions ==
+
+= Does this theme support any plugins? =
+
+This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerce and many more.
+
+== Changelog ==
+
+= 1.3 =
+* Fix: Minor tweaks and bug fixes
+* Update: Minimum requirement WP 4.2
+
+= 1.2.1 =
+* Remove: Delete unnecessary file
+
+= 1.2 =
+* Fix: Some duplicate strings
+* Fix: Minor CSS fixes
+* Update: WP provided pagination features
+
+= 1.1.1 =
+* Update: Implement new archive functions
+* Update: Coding as per WordPress Coding Standard
+* Fix: Minor CSS fixes
+
+= 1.1 =
+* Update: Font Awesome to latest version
+* Update: Bootstrap to latest version
+* Update: Better sanitization callback functions
+* New: Addes searchform.php template file
+* New: Add option for numeric pagination
+* New: Image size and alignment option in archive pates
+
+= 1.0.6 =
+* Feature: Go to top button
+* Fix: New title tag support for latest version of WordPress
+* Update: Latest Bootstrap and Font Awesome libraries
+* Update: Use separate panel for Theme Options
+
+= 1.0.4 =
+* Fixed missing translation strings in language file
+* Sanitizing customizer options
+
+= 1.0.0 =
+* Initial Submission to WordPress.org
+
+== Credits ==
+* Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* Font Awesome is fully open source and is GPL friendly (http://fortawesome.github.io/Font-Awesome/)
+* jquery.meanmenu.js released by Chris Wharton (https://github.com/meanthemes/meanMenu) under GPLv3 license
+* Google Fonts - Apache License, version 2.0
+* The image used in screenshot of the theme is theme's author personal creation and is free for personal and commercial use.
