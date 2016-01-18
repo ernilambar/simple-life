@@ -44,12 +44,6 @@
 		<?php endif; ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="assistive-text skip-link">
-				<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'simple-life' ); ?>">
-					<?php esc_html_e( 'Skip to content', 'simple-life' ); ?>
-				</a>
-			</div>
-
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
