@@ -15,6 +15,7 @@
 
 		<exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
+		<exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
 
 	</rule>
 	<rule ref="WordPress-Docs">
