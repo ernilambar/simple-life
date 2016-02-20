@@ -43,7 +43,7 @@
 		</div>
 		<?php endif; ?>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Primary Menu', 'simple-life' ); ?>">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

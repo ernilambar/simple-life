@@ -22,18 +22,24 @@
 
 	<footer id="colophon" class="site-footer container" role="contentinfo">
 
-	<?php
-	  wp_nav_menu( array(
-		  'theme_location'  => 'footer',
-		  'depth'           => 1,
-		  'container'       => 'div',
-		  'container_class' => 'footer-nav-wrapper',
-		  'menu_class'      => 'footer-nav',
-		  'fallback_cb'     => '',
-		  'link_after'      => '',
-		  )
-	  );
-	?>
+		<?php
+		$footer_nav = wp_nav_menu( array(
+			'theme_location'  => 'footer',
+			'depth'           => 1,
+			'container'       => 'div',
+			'container_class' => 'footer-nav-wrapper',
+			'menu_class'      => 'footer-nav',
+			'fallback_cb'     => '',
+			'link_after'      => '',
+			'echo'            => false,
+			)
+		);
+		?>
+		<?php if ( ! empty( $footer_nav ) ) : ?>
+			<nav class="social-navigation" role="navigation" aria-label="<?php _e( 'Footer Menu', 'simple-life' ); ?>">
+			<?php echo $footer_nav; ?>
+			</nav>
+		<?php endif ?>
 
 	<?php
 	$copyright_text = simple_life_get_option( 'copyright_text' );
