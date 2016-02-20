@@ -57,7 +57,7 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 		'pagination_type'              => 'default',
 		'footer_widgets'               => 0,
 		'copyright_text'               => '&copy; ' . esc_html__( '2015 All rights reserved', 'simple-life' ),
-		'powered_by'                   => false,
+		'powered_by'                   => true,
 		'go_to_top'                    => true,
 		);
 		$defaults = apply_filters( 'simple_life_filter_default_theme_options', $defaults );
