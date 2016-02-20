@@ -183,3 +183,24 @@ if ( ! function_exists( 'simple_life_footer_widgets' ) ) :
 
 	} // End function simple_life_footer_widgets.
 endif;
+
+if ( ! function_exists( 'simple_life_primary_menu_fallback' ) ) :
+
+	/**
+	 * Primary menu callback.
+	 *
+	 * @since 1.0.0
+	 */
+	function simple_life_primary_menu_fallback() {
+
+		echo '<ul>';
+		echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . __( 'Home', 'simple-life' ). '</a></li>';
+		wp_list_pages( array(
+			'title_li' => '',
+			'depth'    => 1,
+			'number'   => 10,
+		) );
+		echo '</ul>';
+
+	}
+endif;
