@@ -704,6 +704,9 @@ footer.entry-footer {
     margin: 1em 0 0;
     padding: 0;
 }
+.readmore .fa {
+    margin-left: 5px;
+}
 h2 a, h3 a {
     color: #252525 !important;
     text-decoration: none !important;

@@ -227,7 +227,7 @@ if ( ! function_exists( 'simple_life_excerpt_readmore' ) ) :
 		if ( empty( $read_more_text ) ) {
 			return $more;
 		}
-		$output = '... <a href="'. esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text )  . ' <span class="fa fa-angle-double-right"></span></a>';
+		$output = '... <a href="'. esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text )  . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span><span class="fa fa-angle-double-right"></span></a>';
 		$output = apply_filters( 'simple_life_filter_read_more_content' , $output );
 		return $output;
 	}
