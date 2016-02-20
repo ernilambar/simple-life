@@ -33,7 +33,7 @@
 		<?php if ( ( false === $replace_site_title && ! empty( $site_logo ) ) || empty( $site_logo ) ) : ?>
   			<h1 class="site-title text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php endif ?>
-			<h2 class="site-description text-center"><?php bloginfo( 'description' ); ?></h2>
+			<p class="site-description text-center"><?php bloginfo( 'description' ); ?></p>
 		</div>
 		<?php if ( get_header_image() ) : ?>
 		<div id="site-header">
