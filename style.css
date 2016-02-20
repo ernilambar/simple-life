@@ -430,37 +430,17 @@ a:active {
     text-align: left;
     display: inline-block;
 }
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
+@media screen and (min-width: 640px) {
 	.main-navigation ul {
 		display: block;
 	}
 }
-
-
-
 /* Small menu */
 .menu-toggle {
-	display: none;
+	display: none!important;
 }
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
 
-	.main-navigation ul {
-		display: none;
-	}
-}
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -1147,10 +1127,11 @@ a.scrollup, a.scrollup:active {
 @media only screen and (max-width:640px) {
 
   header#masthead{
-    padding-top:40px;
+    padding-top: 40px;
   }
   .site-branding{
-    margin:0 5px;
+    margin: 0 5px;
+    padding: 30px 0 0;
   }
 
 }
