@@ -297,12 +297,15 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-
-.main-navigation > div > ul {
-	background-color: #0fa5d9;
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
 }
 
 .main-navigation ul {
+	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -311,155 +314,78 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding: 0;
-	margin: 0;
-}
-
-.main-navigation li:first-child {
-	margin-left: 0;
 }
 
 .main-navigation a {
-	color: #fff;
+	display: block;
 	text-decoration: none;
-	display: inline-block;
-	height: 48px;
-	line-height: 48px;
-	padding: 0 1em;
-}
-
-.main-navigation > .menu > ul > li > a:hover,
-.main-navigation > div > ul > li > a:hover {
-	color: #fff;
-}
-
-.main-navigation > .menu > ul > li.page_item_has_children > a,
-.main-navigation > div > ul > li.menu-item-has-children > a {
-	padding-right: 18px;
-}
-
-.main-navigation > .menu > ul > li.page_item_has_children > a:before,
-.main-navigation > div > ul > li.menu-item-has-children > a:before {
-	font-family: "FontAwesome" !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-	font-variant: normal !important;
-	text-transform: none !important;
-	speak: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	position: absolute;
-	right: 2px;
-	top: 18px;
-	content: "\f107";
-	font-size: 14px;
-	width: 14px;
-	text-align: left;
-	display: inline-block;
-}
-
-.main-navigation li:hover a,
-.main-navigation li:focus a {
-	background-color: rgba(255,255,255,0.2);
-}
-
-.main-navigation > div > ul > li:hover > ul,
-.main-navigation > .menu > ul > li:hover > ul {
-	visibility: visible;
-	opacity: 1;
 }
 
 .main-navigation ul ul {
-	visibility: hidden;
-	opacity: 0;
-	min-width: 180px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
 	position: absolute;
-	top: 48px;
-	left: 0;
+	top: 1.5em;
+	left: -999em;
 	z-index: 99999;
-	background: #fff;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
-}
-
-.main-navigation ul ul:after {
-   	border-bottom: 6px solid #fff;
-    border-left: 6px solid rgba(0, 0, 0, 0);
-    border-right: 6px solid rgba(0, 0, 0, 0);
-    content: "";
-    height: 0;
-    margin: 0 auto 0 -4px;
-    position: absolute;
-    text-align: center;
-    width: 0;
-    left: 1em;
-    top: -6px;
-}
-
-.main-navigation ul ul li {
-	float: none;
-	margin: 0;
-	border-top: 1px dashed rgba(0,0,0,0.1);
-	width: auto;
-}
-
-.main-navigation ul ul li:first-child {
-	border: 0;
-}
-
-.main-navigation ul ul a {
-	color: #656565;
-	display: block;
-	height: auto;
-  line-height: 1.5;
-  padding: 0.75em 1em;
-  background: #fff;
-}
-
-.main-navigation ul li:hover ul a,
-.main-navigation ul li:focus ul a {
-	background: #fff;
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a:focus {
-	color: #0fa5d9;
 }
 
 .main-navigation ul ul ul {
-	display: none;
-	visibility: visible;
-	opacity: 1;
-	left: 100%;
+	left: -999em;
 	top: 0;
 }
 
-.main-navigation ul ul ul:after {
-	content: none;
+.main-navigation ul ul a {
+	width: 200px;
 }
 
-.main-navigation ul ul li:hover ul {
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
 	display: block;
 }
 
-.main-navigation li:hover > a {
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }
 
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
-}
-.assistive-text {
-	display: none;
-}
 
 
 /* Small menu */
