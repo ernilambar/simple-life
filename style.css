@@ -220,7 +220,14 @@ input[type="submit"] {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	border: 1px #FFF solid;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
