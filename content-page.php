@@ -28,6 +28,6 @@
 		?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'simple-life' ), '<span class="edit-link"><i class="fa fa-edit"></i>', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'simple-life' ), '<span class="edit-link"><i class="fa fa-edit" aria-hidden="true"></i>', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

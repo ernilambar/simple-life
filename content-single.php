@@ -41,14 +41,14 @@
 			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 
 			if ( ! empty( $category_list ) ) {
-				echo '<span class="sl-category"><i class="fa fa-folder-open"></i> ' . $category_list . '</span>';
+				echo '<span class="sl-category"><i class="fa fa-folder-open" aria-hidden="true"></i> ' . $category_list . '</span>';
 			}
 			if ( ! empty( $tag_list ) ) {
-				echo '<span class="sl-tags"><i class="fa fa-tags"></i> ' . $tag_list . '</span>';
+				echo '<span class="sl-tags"><i class="fa fa-tags" aria-hidden="true"></i> ' . $tag_list . '</span>';
 			}
 
 		?>
 
-		<?php edit_post_link( esc_html__( 'Edit', 'simple-life' ), '<span class="edit-link pull-right"><i class="fa fa-edit"></i>', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'simple-life' ), '<span class="edit-link pull-right"><i class="fa fa-edit" aria-hidden="true"></i>', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

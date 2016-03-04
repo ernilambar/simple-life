@@ -227,7 +227,7 @@ if ( ! function_exists( 'simple_life_excerpt_readmore' ) ) :
 		if ( empty( $read_more_text ) ) {
 			return $more;
 		}
-		$output = '... <a href="'. esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text )  . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span><span class="fa fa-angle-double-right"></span></a>';
+		$output = '... <a href="'. esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text )  . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span><span class="fa fa-angle-double-right" aria-hidden="true"></span></a>';
 		$output = apply_filters( 'simple_life_filter_read_more_content' , $output );
 		return $output;
 	}
@@ -259,7 +259,7 @@ if ( ! function_exists( 'simple_life_add_go_to_top' ) ) :
 		if ( true !== $go_to_top ) {
 			return;
 		}
-		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span></a>';
+		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>';
 
 	}
 endif;

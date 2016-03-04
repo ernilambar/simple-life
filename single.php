@@ -16,8 +16,8 @@ get_header(); ?>
 
 			<?php
 				the_post_navigation( array(
-					'next_text' => '%title <i class="fa fa-chevron-right"></i>',
-					'prev_text' => '<i class="fa fa-chevron-left"></i> %title',
+					'next_text' => '%title <i class="fa fa-chevron-right" aria-hidden="true"></i>',
+					'prev_text' => '<i class="fa fa-chevron-left" aria-hidden="true"></i> %title',
 				) );
 			?>
 

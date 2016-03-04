@@ -25,8 +25,8 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 				} else {
 					the_posts_pagination( array(
 						'mid_size'           => 2,
-						'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> ' . __( 'Previous page', 'simple-life' ),
-						'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>',
+						'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Previous page', 'simple-life' ),
+						'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
 						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'simple-life' ) . ' </span>',
 					) );
 				}
@@ -34,8 +34,8 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 
 			case 'default':
 				the_posts_navigation( array(
-					'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left"></i></span> ' . __( 'Older posts', 'simple-life' ),
-					'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>',
+					'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Older posts', 'simple-life' ),
+					'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
 					) );
 				break;
 
@@ -65,11 +65,11 @@ if ( ! function_exists( 'simple_life_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			'%s',
-			'<i class="fa fa-calendar"></i> <a href="' . esc_url( get_day_link( get_post_time( 'Y' ), get_post_time( 'm' ), get_post_time( 'j' ) ) ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<i class="fa fa-calendar" aria-hidden="true"></i> <a href="' . esc_url( get_day_link( get_post_time( 'Y' ), get_post_time( 'm' ), get_post_time( 'j' ) ) ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			'<i class="fa fa-user"></i> %s',
+			'<i class="fa fa-user" aria-hidden="true"></i> %s',
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -157,8 +157,8 @@ if ( ! function_exists( 'simple_life_post_format_icon' ) ) :
 
 		?>
 			<span class="fa-stack fa-lg">
-			  <i class="fa fa-circle fa-stack-2x"></i>
-			  <i class="fa fa-<?php echo esc_attr( $format_icon ); ?> fa-stack-1x fa-inverse"></i>
+			  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+			  <i class="fa fa-<?php echo esc_attr( $format_icon ); ?> fa-stack-1x fa-inverse" aria-hidden="true"></i>
 			</span>
 		<?php
 		} // End if.
