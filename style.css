@@ -284,14 +284,13 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a,
-a:visited {
-	color: #0fa5d9;
-}
+a:visited,
 a:hover,
 a:focus,
 a:active {
-	color: #0fa5d9;
+	color: #0b789c;
 }
+
 a:focus {
 	outline: thin dotted;
 }
