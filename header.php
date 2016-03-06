@@ -46,7 +46,7 @@
 		<?php endif; ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simple-life' ); ?></button>
+			<button class="menu-toggle" aria-hidden="true"><?php esc_html_e( 'Primary Menu', 'simple-life' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -57,7 +57,6 @@
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
-
 
 	<div id="content" class="site-content container">
 		<div class="row">

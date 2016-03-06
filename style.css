@@ -210,7 +210,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: medium none;
-	background: none repeat scroll 0 0 #0fa5d9;
+	background: none repeat scroll 0 0 #0b789c;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 12px;
@@ -308,7 +308,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
-	background-color: #0fa5d9;
+	background-color: #0b789c;
 }
 
 .main-navigation ul {
@@ -371,7 +371,7 @@ a:active {
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:focus,
 .main-navigation ul ul a:active {
-	color: #0fa5d9;
+	color: #0b789c;
 }
 
 .main-navigation ul ul li {
@@ -629,7 +629,7 @@ article.sticky {
 .entry-meta,
 .entry-footer {
     clear: both;
-    color: #0fa5d9;
+    color: #0b789c;
 }
 .entry-meta span{
 	margin-right: 15px;
@@ -683,14 +683,14 @@ h2 a, h3 a {
     text-decoration: none !important;
 }
 h2 a:hover, h3 a:hover {
-    color: #0fa5d9 !important;
+    color: #0b789c !important;
 }
 
 .entry-post-format {
 	position: relative;
 	float: right;
   width: 48px;
-  color: #0fa5d9;
+  color: #0b789c;
   font-size: 20px;
 }
 .site-main .paging-navigation,
@@ -943,7 +943,7 @@ body{
 .site-title a:focus,
 .site-title a:active {
 	text-decoration: none;
-	color: #0fa5d9;
+	color: #0b789c;
 }
 
 .site-branding .site-logo{
@@ -983,14 +983,12 @@ body{
     padding: 0;
     margin-left:15px;
 }
-.widget li {
-    /*margin-left: 15px;*/
-}
+.widget li {}
 .widget li:before {
 	font-family: 'FontAwesome';
 	content: '\f105';
-	margin:0 5px 0 -15px;
-	color: #0fa5d9;
+	margin: 0 5px 0 -15px;
+	color: #0b789c;
 }
 
 .widget_recent_comments #recentcomments li:before{
@@ -998,7 +996,7 @@ body{
 
 }
 .nav-links i.fa{
-	color: #0fa5d9;
+	color: #0b789c;
 }
 
 
@@ -1070,7 +1068,7 @@ body.search-no-results .page-content {
 /*woocommerce starts*/
 .woocommerce .woocommerce-breadcrumb a,
 .woocommerce-page .woocommerce-breadcrumb a {
-    color: #0fa5d9;
+    color: #0b789c;
 }
 .woocommerce #content div.product p.price del, .woocommerce #content div.product span.price del, .woocommerce div.product p.price del, .woocommerce div.product span.price del, .woocommerce-page #content div.product p.price del, .woocommerce-page #content div.product span.price del, .woocommerce-page div.product p.price del, .woocommerce-page div.product span.price del {
     font-size: 0.9em;

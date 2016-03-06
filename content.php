@@ -45,7 +45,7 @@
 
 					<div class="entry-summary entry-summary-with-thumbnail">
 				 		<?php if ( has_post_thumbnail() ) : ?>
-			 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+			 				<a href="<?php the_permalink(); ?>">
 			 					<?php the_post_thumbnail( $archive_image_thumbnail_size, array( 'class' => 'align' . $archive_image_alignment ) ); ?>
 			 				</a>
 				 		<?php endif; ?>
@@ -61,7 +61,7 @@
 			?>
 					<div class="entry-content">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+							<a href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail( $archive_image_thumbnail_size, array( 'class' => 'align' . $archive_image_alignment ) ); ?>
 							</a>
 						<?php endif; ?>
