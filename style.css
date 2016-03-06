@@ -567,9 +567,6 @@ a:active {
 }
 
 /* Search widget */
-.search-form .search-submit {
-	display: none;
-}
 .search-form .search-form label {
 	width:100%;
 }
@@ -578,7 +575,7 @@ a:active {
 	font-weight: normal;
 	font-family: inherit;
 	box-sizing: border-box;
-  max-width: 350px;
+	max-width: 350px;
 }
 .search-form .search-field {
 	width:100%;
