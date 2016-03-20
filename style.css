@@ -399,7 +399,6 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-	background-color: rgba(255,255,255,0.2);
 }
 
 .main-navigation ul ul :hover > a,
