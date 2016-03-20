@@ -259,7 +259,7 @@ if ( ! function_exists( 'simple_life_add_go_to_top' ) ) :
 		if ( true !== $go_to_top ) {
 			return;
 		}
-		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>';
+		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse" aria-hidden="true"></i></span><span class="screen-reader-text">' . __( 'Go to top', 'simple-life' ) . '</span></a>';
 
 	}
 endif;
