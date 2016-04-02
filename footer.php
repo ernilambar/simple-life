@@ -61,7 +61,7 @@
   		<div class="site-info" id="powered-by-wrap">
   			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'simple-life' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'simple-life' ), 'WordPress' ); ?></a>
   			<span class="sep"> | </span>
-  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="' . esc_url( 'http://www.nilambar.net/' ) . '" rel="designer">Nilambar</a>' ); ?>
+  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="' . esc_url( 'http://nilambar.net/' ) . '" rel="designer">Nilambar</a>' ); ?>
   		</div><!-- .site-info -->
 
 	<?php endif ?>
