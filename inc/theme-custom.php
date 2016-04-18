@@ -234,19 +234,6 @@ if ( ! function_exists( 'simple_life_excerpt_readmore' ) ) :
 endif;
 add_filter( 'excerpt_more', 'simple_life_excerpt_readmore' );
 
-
-if ( ! function_exists( 'simple_life_add_editor_styles' ) ) :
-	/**
-	 * Implement editor style.
-	 *
-	 * @since 1.0.0
-	 */
-	function simple_life_add_editor_styles() {
-		add_editor_style( 'editor-style.css' );
-	}
-endif;
-add_action( 'after_setup_theme', 'simple_life_add_editor_styles' );
-
 if ( ! function_exists( 'simple_life_add_go_to_top' ) ) :
 	/**
 	 * Add go to top icon.

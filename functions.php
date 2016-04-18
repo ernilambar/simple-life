@@ -81,6 +81,9 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 			'gallery',
 		) );
 
+		// Editor style.
+		add_editor_style( 'editor-style.css', '//fonts.googleapis.com/css?family=Open+Sans' );
+
 		// Setup the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters(
 			'simple_life_custom_background_args', array(
@@ -88,8 +91,8 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 				'default-image' => '',
 			) ) );
 
-			global $simple_life_default_options;
-			$simple_life_default_options = simple_life_get_theme_option_defaults();
+		global $simple_life_default_options;
+		$simple_life_default_options = simple_life_get_theme_option_defaults();
 
 	}
 endif;
