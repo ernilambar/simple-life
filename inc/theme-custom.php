@@ -335,7 +335,7 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 			require get_template_directory() . '/lib/breadcrumbs.php';
 		}
 
-		echo '<div id="breadcrumb"><div class="container"><div class="row">';
+		echo '<div id="breadcrumb"><div class="container"><div class="row"><div class="col-sm-12">';
 
 		$breadcrumb_args = array(
 			'container'   => 'div',
@@ -344,7 +344,7 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 
 		breadcrumb_trail( $breadcrumb_args );
 
-		echo '</div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
+		echo '</div><!-- .col-sm-12 --></div></div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
 
 	}
 

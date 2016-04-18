@@ -20,6 +20,10 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 == Changelog ==
 
+= 1.9 - Apr 20 2016 =
+* Add breadcrumb feature
+* Minor fixes
+
 = 1.8 - Apr 18 2016 =
 * Implement Custom Logo
 * Update Font Awesome

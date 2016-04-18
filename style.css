@@ -1072,7 +1072,12 @@ footer#colophon a{
     text-transform: uppercase;
     font-weight: bold;
 }
-
+.taxonomy-description {
+	margin-top: 10px;
+}
+.taxonomy-description p {
+	margin-bottom: 0;
+}
 header#masthead{
 	padding:0;
 }
@@ -1136,6 +1141,29 @@ a.scrollup:focus {
 	border: 1px #FFF solid;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+#breadcrumb {
+	margin-top: 25px;
+}
+
+.breadcrumb-trail ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumb-trail ul li {
+	display: inline-block;
+}
+
+.breadcrumb-trail .trail-items li::after {
+	content: "\002F";
+	padding: 0 5px;
+}
+
+.breadcrumb-trail .trail-items li:last-of-type::after {
+	display: none;
 }
 
 @media only screen and (max-width:767px) {
