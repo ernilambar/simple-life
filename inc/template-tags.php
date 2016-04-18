@@ -176,5 +176,16 @@ if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
 		if ( function_exists( 'the_custom_logo' ) ) {
 			the_custom_logo();
 		}
+		else {
+			$site_logo = simple_life_get_option( 'site_logo' );
+			if ( ! empty( $site_logo ) ) {
+				?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link">
+					<img src="<?php echo esc_url( $site_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				</a>
+				<?php
+			}
+		}
+
 	}
 endif;

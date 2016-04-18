@@ -25,17 +25,8 @@
 
 	<header id="masthead" class="site-header container" role="banner">
 		<div class="site-branding">
-		<?php simple_life_the_custom_logo(); ?>
-		<?php
-		$site_logo = simple_life_get_option( 'site_logo' );
-		$replace_site_title = simple_life_get_option( 'replace_site_title' );
-		?>
-		<?php if ( ! empty( $site_logo ) ) : ?>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo esc_url( $site_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="site-logo"/></a>
-		<?php endif ?>
-		<?php if ( ( false === $replace_site_title && ! empty( $site_logo ) ) || empty( $site_logo ) ) : ?>
+			<?php simple_life_the_custom_logo(); ?>
   			<h1 class="site-title text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php endif ?>
 			<p class="site-description text-center"><?php bloginfo( 'description' ); ?></p>
 		</div>
 		<?php if ( get_header_image() ) : ?>

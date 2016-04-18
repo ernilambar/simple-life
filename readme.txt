@@ -20,6 +20,10 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 == Changelog ==
 
+= 1.8 - Apr 18 2016 =
+* Implement Custom Logo
+* Minor fixes
+
 = 1.7 =
 * Change screenshot
 * Minor fixes

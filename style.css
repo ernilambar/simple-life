@@ -960,7 +960,8 @@ body{
 	color: #0b789c;
 }
 
-.site-branding .site-logo{
+.site-branding .custom-logo-link img,
+.site-branding .site-logo-link img{
   margin-bottom: 10px;
 }
 .site-description {
