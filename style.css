@@ -171,19 +171,20 @@ code{
 	white-space: normal !important;
 }
 ::-webkit-input-placeholder {
-   color: #111;
+   color: #6e6e6e;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #111;
+   color: #6e6e6e;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #111;
+   color: #6e6e6e;
+   opacity: 1;
 }
 
 :-ms-input-placeholder {
-   color: #111;
+   color: #6e6e6e;
 }
 /* Clearing floats */
 

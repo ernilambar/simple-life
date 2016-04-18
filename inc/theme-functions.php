@@ -45,21 +45,22 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 	function simple_life_get_theme_option_defaults() {
 
 		$defaults = array(
-		'site_logo'                    => '',
-		'replace_site_title'           => false,
-		'site_layout'                  => 'content-sidebar',
-		'content_layout'               => 'excerpt-thumb',
-		'archive_image_thumbnail_size' => 'large',
-		'archive_image_alignment'      => 'center',
-		'read_more_text'               => esc_html__( 'Read more', 'simple-life' ),
-		'search_placeholder'           => esc_html__( 'Search...', 'simple-life' ),
-		'excerpt_length'               => 40,
-		'pagination_type'              => 'default',
-		'footer_widgets'               => 0,
-		'copyright_text'               => '&copy; ' . esc_html__( '2015 All rights reserved', 'simple-life' ),
-		'powered_by'                   => true,
-		'go_to_top'                    => true,
-		);
+			'site_logo'                    => '',
+			'replace_site_title'           => false,
+			'site_layout'                  => 'content-sidebar',
+			'content_layout'               => 'excerpt-thumb',
+			'archive_image_thumbnail_size' => 'large',
+			'archive_image_alignment'      => 'center',
+			'enable_breadcrumb'            => false,
+			'read_more_text'               => esc_html__( 'Read more', 'simple-life' ),
+			'search_placeholder'           => esc_html__( 'Search...', 'simple-life' ),
+			'excerpt_length'               => 40,
+			'pagination_type'              => 'default',
+			'footer_widgets'               => 0,
+			'copyright_text'               => '&copy; ' . date( 'Y' ) . ' ' .  esc_html__( 'All rights reserved', 'simple-life' ),
+			'powered_by'                   => true,
+			'go_to_top'                    => true,
+			);
 		$defaults = apply_filters( 'simple_life_filter_default_theme_options', $defaults );
 		return $defaults;
 
