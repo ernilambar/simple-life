@@ -140,7 +140,7 @@ if ( ! function_exists( 'simple_life_footer_widgets_init' ) ) :
 	}
 endif;
 
-add_action( 'widgets_init', 'simple_life_footer_widgets_init', 100 );
+// add_action( 'widgets_init', 'simple_life_footer_widgets_init', 100 );
 
 
 /**

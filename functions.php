@@ -92,6 +92,12 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 				'default-image' => '',
 			) ) );
 
+		// Enable support for footer widgets.
+		add_theme_support( 'footer-widgets', 4 );
+
+		// Load Supports.
+		require get_template_directory() . '/inc/supports.php';
+
 		global $simple_life_default_options;
 		$simple_life_default_options = simple_life_get_theme_option_defaults();
 
