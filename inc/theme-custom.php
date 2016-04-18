@@ -309,3 +309,46 @@ function simple_life_import_logo_field() {
 
 }
 add_action( 'after_setup_theme', 'simple_life_import_logo_field', 20 );
+
+if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
+
+	/**
+	 * Add breadcrumb.
+	 *
+	 * @since 1.9
+	 */
+	function simple_life_add_breadcrumb() {
+
+		// Bail if Home Page.
+		if ( is_front_page() || is_home() ) {
+			return;
+		}
+
+		// Bail if Breadcrumb disabled.
+		$enable_breadcrumb = simple_life_get_option( 'enable_breadcrumb' );
+		if ( true !== $enable_breadcrumb ) {
+			return;
+		}
+
+		// Load library if not exists.
+		if ( ! function_exists( 'breadcrumb_trail' ) ) {
+			require get_template_directory() . '/lib/breadcrumbs.php';
+		}
+
+		echo '<div id="breadcrumb"><div class="container"><div class="row">';
+
+		$breadcrumb_args = array(
+			'container'   => 'div',
+			'show_browse' => false,
+			);
+
+		breadcrumb_trail( $breadcrumb_args );
+
+		echo '</div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
+
+	}
+
+endif;
+
+
+add_action( 'simple_life_action_after_header', 'simple_life_add_breadcrumb' );

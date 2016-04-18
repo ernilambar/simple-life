@@ -23,6 +23,8 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simple-life' ); ?></a>
 
+	<?php do_action( 'simple_life_action_before_header' ); ?>
+
 	<header id="masthead" class="site-header container" role="banner">
 		<div class="site-branding">
 			<?php simple_life_the_custom_logo(); ?>
@@ -49,6 +51,8 @@
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
+
+	<?php do_action( 'simple_life_action_after_header' ); ?>
 
 	<div id="content" class="site-content container">
 		<div class="row">
