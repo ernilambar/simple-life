@@ -82,7 +82,7 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 		) );
 
 		// Editor style.
-		add_editor_style( 'editor-style.css', '//fonts.googleapis.com/css?family=Open+Sans' );
+		add_editor_style( 'css/editor-style.css', '//fonts.googleapis.com/css?family=Open+Sans' );
 
 		// Setup the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters(
