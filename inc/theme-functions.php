@@ -46,7 +46,7 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 
 		$defaults = array(
 		'site_logo'                    => '',
-		'replace_site_title'           => true,
+		'replace_site_title'           => false,
 		'site_layout'                  => 'content-sidebar',
 		'content_layout'               => 'excerpt-thumb',
 		'archive_image_thumbnail_size' => 'large',

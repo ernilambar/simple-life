@@ -25,6 +25,7 @@
 
 	<header id="masthead" class="site-header container" role="banner">
 		<div class="site-branding">
+		<?php simple_life_the_custom_logo(); ?>
 		<?php
 		$site_logo = simple_life_get_option( 'site_logo' );
 		$replace_site_title = simple_life_get_option( 'replace_site_title' );

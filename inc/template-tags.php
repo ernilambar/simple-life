@@ -165,3 +165,16 @@ if ( ! function_exists( 'simple_life_post_format_icon' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
+	/**
+	 * Displays the optional custom logo.
+	 *
+	 * @since 1.8
+	 */
+	function simple_life_the_custom_logo() {
+		if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		}
+	}
+endif;
