@@ -22,6 +22,7 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 = 1.8 - Apr 18 2016 =
 * Implement Custom Logo
+* Update Font Awesome
 * Minor fixes
 
 = 1.7 =

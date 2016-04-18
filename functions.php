@@ -120,8 +120,8 @@ add_action( 'widgets_init', 'simple_life_widgets_init' );
  */
 function simple_life_scripts() {
 	wp_enqueue_style( 'simple-life-style-open-sans', '//fonts.googleapis.com/css?family=Open+Sans' );
-	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', false ,'3.3.5' );
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome.min.css', false ,'4.4.0' );
+	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap.min.css', false ,'3.3.6' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome.min.css', false ,'4.6.1' );
 	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu.css', false ,'2.0.6' );
 
 	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri() );
