@@ -105,23 +105,8 @@ function simple_life_customize_register( $wp_customize ) {
 				 )
 			)
 		);
-		// Setting - replace_site_title.
-		$wp_customize->add_setting( 'simple_life_options[replace_site_title]',
-			array(
-				'default'           => $simple_life_default_options['replace_site_title'],
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'simple_life_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control('simple_life_options[replace_site_title]', array(
-			  'label'    => __( 'Replace Site Title by Logo', 'simple-life' ),
-			  'section'  => 'simple_life_options_logo',
-			  'type'     => 'checkbox',
-			  'priority' => 920,
-		));
 
 	} // End if function_exists - the_custom_logo.
-
 
 	// General Section.
 	$wp_customize->add_section( 'simple_life_options_general',
