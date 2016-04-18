@@ -120,20 +120,23 @@ add_action( 'widgets_init', 'simple_life_widgets_init' );
  * Enqueue scripts and styles.
  */
 function simple_life_scripts() {
+
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
 	wp_enqueue_style( 'simple-life-style-open-sans', '//fonts.googleapis.com/css?family=Open+Sans' );
-	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap.min.css', false ,'3.3.6' );
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome.min.css', false ,'4.6.1' );
-	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu.css', false ,'2.0.6' );
+	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap' . $min . '.css', false ,'3.3.6' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome' . $min . '.css', false ,'4.6.1' );
+	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu' . $min . '.css', false ,'2.0.6' );
 
 	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri() );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'simple-life-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
+	wp_enqueue_script( 'simple-life-html5', get_template_directory_uri() . '/js/html5' . $min . '.js', array(), '3.7.3' );
 	wp_script_add_data( 'simple-life-html5', 'conditional', 'lt IE 9' );
-	wp_enqueue_script( 'simple-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'simple-life-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu.js', array( 'jquery' ), '2.0.6', true );
-	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'simple-life-meanmenu-script' ), '1.8', true );
+	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu' . $min . '.js', array( 'jquery' ), '2.0.6', true );
+	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery', 'simple-life-meanmenu-script' ), '1.8', true );
 	wp_localize_script( 'simple-life-custom', 'Simple_Life_Screen_Reader_Text', array(
 		'expand'   => __( 'expand menu', 'simple-life' ),
 		'collapse' => __( 'collapse menu', 'simple-life' ),
