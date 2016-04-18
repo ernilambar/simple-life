@@ -186,5 +186,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Third Party Compatibility.
  */
-require get_template_directory() . '/support/woocommerce.php';
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/support/woocommerce.php';
+}
 
