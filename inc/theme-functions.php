@@ -66,6 +66,26 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'simple_life_get_options' ) ) :
+
+	/**
+	 * Get theme options.
+	 *
+	 * @since 1.8
+	 */
+	function simple_life_get_options() {
+
+		$value = array();
+
+		$value = get_theme_mod( 'simple_life_options' );
+
+		return $value;
+
+	}
+
+endif;
+
+
 /**
  * Render content class.
  *
