@@ -20,6 +20,7 @@
 		"Backbone": false,
 		"jQuery": false,
 		"JSON": false,
+		"Simple_Life_Screen_Reader_Text": false,
 		"wp": false
 	}
 }
