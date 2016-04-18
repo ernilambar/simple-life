@@ -1101,27 +1101,34 @@ body.search-no-results .page-content {
 
 .woocommerce div.type-product{
 	background-color: #FFFFFF;
-	padding: 10px;
+	padding: 20px;
 }
 .woocommerce div.type-product h1.product_title{
 	font-size: 1.714em;
 	font-weight: bold;
 }
-.woocommerce h1.page-title{
-  font-size: 1.1em;
+.woocommerce .page-title{
+	font-size: 1.1em;
 	background-color: #FFFFFF;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1em;
+	margin-top: 0;
 }
 .woocommerce ul.products li.product{
 	background-color: #FFFFFF;
 	text-align: center;
 	padding-bottom: 5px;
 }
-.woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
-    color: rgba(145, 145, 145, 0.5);
+.woocommerce ul.products li.product .price del,
+.woocommerce-page ul.products li.product .price del {
+    color: #333;
     font-size: 0.9em;
+}
+.woocommerce span.onsale {
+	padding: 0;
+	left: 1em;
+	top: 1em;
 }
 /*woocommerce ends*/
 

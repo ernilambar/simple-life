@@ -350,5 +350,4 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 
 endif;
 
-
 add_action( 'simple_life_action_after_header', 'simple_life_add_breadcrumb' );
