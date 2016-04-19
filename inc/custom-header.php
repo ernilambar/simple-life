@@ -14,7 +14,7 @@
 function simple_life_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'simple_life_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => '555555',
 		'width'                  => 1170,
 		'height'                 => 250,
 		'flex-height'            => true,

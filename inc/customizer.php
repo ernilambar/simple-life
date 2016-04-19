@@ -309,29 +309,6 @@ function simple_life_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting - footer_widgets.
-	$wp_customize->add_setting( 'simple_life_options[footer_widgets]',
-		array(
-			'default'           => $simple_life_default_options['footer_widgets'],
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'absint',
-		)
-	);
-	$wp_customize->add_control('simple_life_options[footer_widgets]', array(
-		  'label'    => __( 'Footer Widgets', 'simple-life' ),
-		  'section'  => 'simple_life_options_footer',
-		  'type'     => 'select',
-		  'priority' => 905,
-		  'choices'  => array(
-				'0' => __( 'No Widget', 'simple-life' ),
-				'1' => sprintf( __( '%s Widget', 'simple-life' ), 1 ),
-				'2' => sprintf( __( '%s Widgets', 'simple-life' ), 2 ),
-				'3' => sprintf( __( '%s Widgets', 'simple-life' ), 3 ),
-				'4' => sprintf( __( '%s Widgets', 'simple-life' ), 4 ),
-				'6' => sprintf( __( '%s Widgets', 'simple-life' ), 6 ),
-			),
-	));
-
 	// Setting - copyright_text.
 	$wp_customize->add_setting( 'simple_life_options[copyright_text]',
 		array(
