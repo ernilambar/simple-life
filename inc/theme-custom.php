@@ -108,85 +108,11 @@ if ( ! function_exists( 'simple_life_custom_post_classes' ) ) :
 
 	}
 endif;
+
 add_filter( 'post_class', 'simple_life_custom_post_classes' );
 
-
-
-if ( ! function_exists( 'simple_life_footer_widgets_init' ) ) :
-	/**
-	 * Register footer widgets.
-	 *
-	 * @since 1.0.0
-	 */
-	function simple_life_footer_widgets_init() {
-
-		$flag_apply_footer_widgets = apply_filters( 'simple_life_filter_footer_widgets', true );
-		if ( true !== $flag_apply_footer_widgets ) {
-			return false;
-		}
-
-		$footer_widgets = simple_life_get_option( 'footer_widgets' );
-
-		if ( $footer_widgets > 0 ) {
-			register_sidebars( $footer_widgets, array(
-				'name'          => esc_html__( 'Footer Column', 'simple-life' ) . '%d',
-				'id'            => 'footer-sidebar',
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			));
-		}
-	}
-endif;
-
-// add_action( 'widgets_init', 'simple_life_footer_widgets_init', 100 );
-
-
-/**
- * Modify footer widget column classes.
- *
- * @since 1.0.0
- *
- * @param  array $input Array of footer widget column classes.
- * @return array Modified array of footer widget column classes.
- */
-function simple_life_custom_footer_widget_class( $input ) {
-
-	$footer_widgets = simple_life_get_option( 'footer_widgets' );
-
-	switch ( $footer_widgets ) {
-		case 1:
-			$input = 'col-sm-12';
-		  break;
-
-		case 2:
-			$input = 'col-sm-6';
-		  break;
-
-		case 3:
-			$input = 'col-sm-4';
-		  break;
-
-		case 4:
-			$input = 'col-sm-3';
-		  break;
-
-		case 6:
-			$input = 'col-sm-2';
-		  break;
-
-		default:
-		  break;
-	}
-
-	return $input;
-
-}
-add_filter( 'simple_life_filter_footer_widget_class', 'simple_life_custom_footer_widget_class' );
-
-
 if ( ! function_exists( 'simple_life_custom_excerpt_length' ) ) :
+
 	/**
 	 * Implement excerpt length.
 	 *
@@ -203,7 +129,9 @@ if ( ! function_exists( 'simple_life_custom_excerpt_length' ) ) :
 		}
 		return $excerpt_length;
 	}
+
 endif;
+
 add_filter( 'excerpt_length', 'simple_life_custom_excerpt_length', 999 );
 
 if ( ! function_exists( 'simple_life_excerpt_readmore' ) ) :

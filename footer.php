@@ -11,14 +11,7 @@
     </div> <!-- .row -->
 	</div><!-- #content -->
 
-	<?php
-	$args = array(
-		'container_class' => 'container',
-		'container_id'    => 'footer_widgets_wrap',
-	);
-	simple_life_footer_widgets( $args );
-	?>
-
+	<?php do_action( 'simple_life_action_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer container" role="contentinfo">
 
@@ -67,6 +60,7 @@
 	<?php endif ?>
 
 	</footer><!-- #colophon -->
+	<?php do_action( 'simple_life_action_after_footer' ); ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

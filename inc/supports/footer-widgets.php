@@ -66,7 +66,8 @@ class Simple_Life_Footer_Widgets{
 		if ( $this->active_widgets > 0 ) {
 
 			// Add footer widgets in front end.
-			add_action( $this->theme_prefix . '_after_content_close', array( $this, 'add_footer_widgets' ) );
+			add_action( $this->theme_prefix . '_action_before_footer', array( $this, 'add_footer_widgets' ) );
+
 			// Add custom class in widgets.
 			add_filter( $this->theme_prefix . '_filter_footer_widget_class', array( $this, 'custom_footer_widget_class' ) );
 
@@ -106,7 +107,8 @@ class Simple_Life_Footer_Widgets{
 
 		for ( $i = 1; $i <= $this->max_widgets; $i++ ) {
 
-			if ( is_active_sidebar( 'footer-area-' . $i ) ) {
+			$wid = ( 1 === $i ) ? 'footer-sidebar' : sprintf( 'footer-sidebar-%d', $i ) ;
+			if ( is_active_sidebar( $wid ) ) {
 				$count++;
 			}
 		}
@@ -159,15 +161,17 @@ class Simple_Life_Footer_Widgets{
 	 */
 	function add_footer_widgets() {
 
-		$flag_apply_footer_widgets_content = apply_filters( $this->theme_prefix . '_filter_footer_widgets', true );
+		$flag_apply_footer_widgets_content = apply_filters( $this->theme_prefix . '_filter_footer_widgets_content', true );
 		if ( true !== $flag_apply_footer_widgets_content ) {
 			return false;
 		}
 
 		$args = array(
-			'container' => 'div',
-			'before'    => '<div class="row">',
-			'after'     => '</div><!-- .row -->',
+			'container'       => 'div',
+			'container_id'    => 'footer_widgets_wrap',
+			'container_class' => 'container',
+			'before'          => '<div class="row">',
+			'after'           => '</div><!-- .row -->',
 		);
 		$footer_widgets_content = $this->get_footer_widgets_content( $args );
 		echo $footer_widgets_content;
@@ -184,7 +188,8 @@ class Simple_Life_Footer_Widgets{
 		$arr = array();
 
 		for ( $i = 1; $i <= $this->max_widgets ; $i++ ) {
-			if ( is_active_sidebar( 'footer-area-' . $i ) ) {
+			$wid = ( 1 === $i ) ? 'footer-sidebar' : sprintf( 'footer-sidebar-%d', $i ) ;
+			if ( is_active_sidebar( $wid ) ) {
 				$arr[] = $i;
 			}
 		}
@@ -244,7 +249,8 @@ class Simple_Life_Footer_Widgets{
 			$div_classes = implode( ' ', array( $item_class, $args['wrap_class'] ) );
 
 			echo '<div class="' . $div_classes .  '">';
-			$sidebar_name = 'footer-area-' . $all_active_widgets[ $i - 1 ];
+
+			$sidebar_name = ( 1 === $i ) ? 'footer-sidebar' : sprintf( 'footer-sidebar-%d', $all_active_widgets[ $i - 1 ] ) ;
 			dynamic_sidebar( $sidebar_name );
 			echo '</div><!-- .' . $args['wrap_class'] . ' -->';
 
