@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Simple Life 1.8\n"
+"Project-Id-Version: Simple Life 1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-18 09:49:19+00:00\n"
 "MIME-Version: 1.0\n"
@@ -96,39 +96,39 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: footer.php:39 functions.php:54
+#: footer.php:32 functions.php:54
 msgid "Footer Menu"
 msgstr ""
 
-#: footer.php:62
+#: footer.php:55
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:62
+#: footer.php:55
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:64
+#: footer.php:57
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:53 header.php:41
+#: functions.php:53 header.php:43
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:114
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:116
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:138
+#: functions.php:147
 msgid "expand menu"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:148
 msgid "collapse menu"
 msgstr ""
 
@@ -148,15 +148,11 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:117
-msgid "Replace Site Title by Logo"
-msgstr ""
-
-#: inc/customizer.php:129
+#: inc/customizer.php:114
 msgid "General Options"
 msgstr ""
 
-#: inc/customizer.php:145
+#: inc/customizer.php:130
 msgid "Site Layout"
 msgstr ""
 
@@ -172,28 +168,32 @@ msgstr ""
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:150
 msgid "Content Layout"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:155
 msgid "Full Post (with image)"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:156
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer.php:172
+#: inc/customizer.php:157
 msgid "Excerpt with thumbnail"
 msgstr ""
 
-#: inc/customizer.php:185
+#: inc/customizer.php:170
 msgid "Archive Image Size"
 msgstr ""
 
-#: inc/customizer.php:201
+#: inc/customizer.php:186
 msgid "Archive Image Alignment"
+msgstr ""
+
+#: inc/customizer.php:202
+msgid "Enable Breadcrumb"
 msgstr ""
 
 #: inc/customizer.php:211
@@ -236,37 +236,24 @@ msgstr ""
 msgid "Footer Options"
 msgstr ""
 
-#: inc/customizer.php:321
-msgid "Footer Widgets"
-msgstr ""
-
-#: inc/customizer.php:326
-msgid "No Widget"
-msgstr ""
-
-#: inc/customizer.php:327
-msgid "%s Widget"
-msgstr ""
-
-#: inc/customizer.php:328 inc/customizer.php:329 inc/customizer.php:330
-#: inc/customizer.php:331
-msgid "%s Widgets"
-msgstr ""
-
-#: inc/customizer.php:346
+#: inc/customizer.php:323
 msgid "Copyright text"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:338
 msgid "Show Powered By"
 msgstr ""
 
-#: inc/customizer.php:376
+#: inc/customizer.php:353
 msgid "Enable Go To Top"
 msgstr ""
 
 #: inc/helper.php:44
 msgid "No Image"
+msgstr ""
+
+#: inc/supports/footer-widgets.php:88
+msgid "Footer Column %d"
 msgstr ""
 
 #: inc/template-tags.php:28
@@ -289,28 +276,57 @@ msgstr ""
 msgid "Newer posts"
 msgstr ""
 
-#: inc/theme-custom.php:132
-msgid "Footer Column"
-msgstr ""
-
-#: inc/theme-custom.php:249
+#: inc/theme-custom.php:177
 msgid "Go to top"
 msgstr ""
 
-#: inc/theme-functions.php:54
+#: inc/theme-functions.php:55
 msgid "Read more"
 msgstr ""
 
-#: inc/theme-functions.php:55
+#: inc/theme-functions.php:56
 msgid "Search..."
 msgstr ""
 
-#: inc/theme-functions.php:59
-msgid "2015 All rights reserved"
+#: inc/theme-functions.php:60
+msgid "All rights reserved"
 msgstr ""
 
-#: inc/theme-functions.php:217
+#: inc/theme-functions.php:149 lib/breadcrumbs.php:246
 msgid "Home"
+msgstr ""
+
+#: lib/breadcrumbs.php:244
+msgid "Browse:"
+msgstr ""
+
+#: lib/breadcrumbs.php:247
+msgid "404 Not Found"
+msgstr ""
+
+#: lib/breadcrumbs.php:248
+msgid "Archives"
+msgstr ""
+
+#: lib/breadcrumbs.php:250
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: lib/breadcrumbs.php:252
+#. Translators: %s is the page number.
+msgid "Page %s"
+msgstr ""
+
+#: lib/breadcrumbs.php:254
+#. Translators: Minute archive title. %s is the minute time format.
+msgid "Minute %s"
+msgstr ""
+
+#: lib/breadcrumbs.php:256
+#. Translators: Weekly archive title. %s is the week date format.
+msgid "Week %s"
 msgstr ""
 
 #: search.php:16
@@ -372,6 +388,47 @@ msgstr ""
 #: inc/helper.php:49
 msgctxt "image size"
 msgid "full (original)"
+msgstr ""
+
+#: lib/breadcrumbs.php:245
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: lib/breadcrumbs.php:708
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: lib/breadcrumbs.php:725
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: lib/breadcrumbs.php:742
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: lib/breadcrumbs.php:758 lib/breadcrumbs.php:787 lib/breadcrumbs.php:814
+#: lib/breadcrumbs.php:841 lib/breadcrumbs.php:1176
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: lib/breadcrumbs.php:759 lib/breadcrumbs.php:815 lib/breadcrumbs.php:1180
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: lib/breadcrumbs.php:760 lib/breadcrumbs.php:1184
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: lib/breadcrumbs.php:788
+msgctxt "weekly archives date format"
+msgid "W"
 msgstr ""
 
 #: searchform.php:11
