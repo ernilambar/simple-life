@@ -22,7 +22,8 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 = 1.9 - Apr 20 2016 =
 * Add breadcrumb feature
-* Minor fixes
+* Fix navigation alignment issue
+* Other minor fixes
 
 = 1.8 - Apr 18 2016 =
 * Implement Custom Logo
