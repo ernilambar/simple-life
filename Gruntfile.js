@@ -1,5 +1,5 @@
 /* jshint node:true */
-module.exports = function( grunt ){
+module.exports = function( grunt ) {
 	'use strict';
 
 	grunt.initConfig({
@@ -27,7 +27,7 @@ module.exports = function( grunt ){
 					exclude: ['deploy/.*','node_modules/.*'],
 					updateTimestamp: false,
 					potHeaders: {
-						'report-msgid-bugs-to': '',
+						'report-msgid-bugs-to': 'https://github.com/ernilambar/simple-life/issues',
 						'x-poedit-keywordslist': true,
 						'language-team': '',
 						'Language': 'en_US',
@@ -129,6 +129,7 @@ module.exports = function( grunt ){
 		jshint: {
 			options: grunt.file.readJSON('.jshintrc'),
 			all: [
+				'Gruntfile.js',
 				'js/*.js',
 				'!js/*.min.js'
 			]
@@ -137,19 +138,6 @@ module.exports = function( grunt ){
 		// Clean the directory.
 		clean: {
 			deploy: ['deploy']
-		},
-
-		// Compress files.
-		compress: {
-			deploy: {
-				expand: true,
-				options: {
-					archive: 'deploy/<%= pkg.name %>.zip'
-				},
-				cwd: 'deploy/<%= pkg.name %>/',
-				src: ['**/*'],
-				dest: '<%= pkg.name %>/'
-			}
 		},
 
 		// Uglify JS.
@@ -176,7 +164,6 @@ module.exports = function( grunt ){
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 
@@ -186,7 +173,8 @@ module.exports = function( grunt ){
 	grunt.registerTask( 'build', [
 		'cssmin',
 		'uglify',
-		'textdomain'
+		'checktextdomain',
+		'makepot'
 	]);
 
 	grunt.registerTask( 'precommit', [
@@ -195,15 +183,13 @@ module.exports = function( grunt ){
 	]);
 
 	grunt.registerTask( 'textdomain', [
-		'checktextdomain',
 		'addtextdomain',
 		'makepot'
 	]);
 
 	grunt.registerTask( 'deploy', [
 		'clean:deploy',
-		'copy:deploy',
-		'compress:deploy'
+		'copy:deploy'
 	]);
 
 };

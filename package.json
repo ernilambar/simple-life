@@ -1,7 +1,7 @@
 {
   "name": "simple-life",
   "title": "Simple Life",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "repository": {
@@ -16,7 +16,6 @@
     "grunt-contrib-cssmin": "~0.14.0",
     "grunt-contrib-copy": "~0.8.2",
     "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-compress": "~0.14.0",
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-jshint": "~1.0.0"
   },
