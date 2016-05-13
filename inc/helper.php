@@ -114,8 +114,7 @@ function simple_life_customize_partial_blogdescription() {
  */
 function simple_life_customize_partial_copyright_text() {
 
-	$copyright_text = simple_life_get_option( 'copyright_text' );
-	echo wp_kses_post( $copyright_text );
+	echo wp_kses_post( simple_life_get_option( 'copyright_text' ) );
 
 }
 
@@ -128,6 +127,6 @@ function simple_life_customize_partial_copyright_text() {
  */
 function simple_life_customize_partial_read_more_text() {
 
-	echo simple_life_get_option( 'read_more_text' );
+	echo esc_html( simple_life_get_option( 'read_more_text' ) );
 
 }

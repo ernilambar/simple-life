@@ -21,7 +21,10 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 == Changelog ==
 
 = 2.0 - May 12 2016 =
-* Minor fixes
+* Add support for Customize selective partial refresh for widgets
+* Use partial refresh for several theme options
+* Fix CSS issues
+* Minor bug fixes
 
 = 1.9 - Apr 20 2016 =
 * Add breadcrumb feature
