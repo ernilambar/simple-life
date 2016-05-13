@@ -78,3 +78,25 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	}
 
 endif;
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @since 2.0
+ *
+ * @return void
+ */
+function simple_life_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @since 2.0
+ *
+ * @return void
+ */
+function simple_life_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}

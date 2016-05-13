@@ -14,58 +14,23 @@ function simple_life_customize_register( $wp_customize ) {
 
 	global $simple_life_default_options;
 
-	// Sanitization callback functions.
-	if ( ! function_exists( 'simple_life_sanitize_number_absint' ) ) {
-		/**
-		 * Sanitize positive integer.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @param int                  $number Number to sanitize.
-		 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
-		 * @return int Sanitized number; otherwise, the setting default.
-		 */
-		function simple_life_sanitize_number_absint( $number, $setting ) {
-			$number = absint( $number );
-			return ( $number ? $number : $setting->default );
-		}
-	}
-
-	if ( ! function_exists( 'simple_life_sanitize_checkbox' ) ) {
-		/**
-		 * Sanitize checkbox.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @param bool $checked Whether the checkbox is checked.
-		 * @return bool Whether the checkbox is checked.
-		 */
-		function simple_life_sanitize_checkbox( $checked ) {
-			return ( ( isset( $checked ) && true === $checked ) ? true : false );
-		}
-	}
-
-	if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
-		/**
-		 * Sanitize select.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @param mixed                $input The value to sanitize.
-		 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
-		 * @return mixed Sanitized value.
-		 */
-		function simple_life_sanitize_select( $input, $setting ) {
-			$input = sanitize_key( $input );
-			$choices = $setting->manager->get_control( $setting->id )->choices;
-			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-		}
-	}
-
 	// Panels, sections and fields.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'            => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback'     => 'simple_life_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'            => '.site-description',
+			'container_inclusive' => false,
+			'render_callback'     => 'simple_life_customize_partial_blogdescription',
+		) );
+	}
 
 	// Add Panel.
 	$wp_customize->add_panel( 'simple_life_options_panel',
@@ -183,7 +148,7 @@ function simple_life_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'simple_life_sanitize_select',
 		)
 	);
-	$wp_customize->add_control('simple_life_options[archive_image_alignment]', array(
+	$wp_customize->add_control( 'simple_life_options[archive_image_alignment]', array(
 			'label'           => __( 'Archive Image Alignment', 'simple-life' ),
 			'section'         => 'simple_life_options_general',
 			'type'            => 'select',
@@ -395,3 +360,51 @@ if ( ! function_exists( 'simple_life_is_non_excerpt_content_layout_active' ) ) :
 	}
 
 endif;
+
+// Sanitization callback functions.
+if ( ! function_exists( 'simple_life_sanitize_number_absint' ) ) {
+	/**
+	 * Sanitize positive integer.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param int                  $number Number to sanitize.
+	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
+	 * @return int Sanitized number; otherwise, the setting default.
+	 */
+	function simple_life_sanitize_number_absint( $number, $setting ) {
+		$number = absint( $number );
+		return ( $number ? $number : $setting->default );
+	}
+}
+
+if ( ! function_exists( 'simple_life_sanitize_checkbox' ) ) {
+	/**
+	 * Sanitize checkbox.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param bool $checked Whether the checkbox is checked.
+	 * @return bool Whether the checkbox is checked.
+	 */
+	function simple_life_sanitize_checkbox( $checked ) {
+		return ( ( isset( $checked ) && true === $checked ) ? true : false );
+	}
+}
+
+if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
+	/**
+	 * Sanitize select.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param mixed                $input The value to sanitize.
+	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
+	 * @return mixed Sanitized value.
+	 */
+	function simple_life_sanitize_select( $input, $setting ) {
+		$input = sanitize_key( $input );
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+	}
+}

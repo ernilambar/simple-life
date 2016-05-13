@@ -136,23 +136,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:73
+#: inc/customizer.php:38
 msgid "Simple Life Options"
 msgstr ""
 
-#: inc/customizer.php:83
+#: inc/customizer.php:48
 msgid "Logo Options"
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/customizer.php:67
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:114
+#: inc/customizer.php:79
 msgid "General Options"
 msgstr ""
 
-#: inc/customizer.php:130
+#: inc/customizer.php:95
 msgid "Site Layout"
 msgstr ""
 
@@ -168,83 +168,83 @@ msgstr ""
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer.php:150
+#: inc/customizer.php:115
 msgid "Content Layout"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:120
 msgid "Full Post (with image)"
 msgstr ""
 
-#: inc/customizer.php:156
+#: inc/customizer.php:121
 msgid "Excerpt Only"
 msgstr ""
 
-#: inc/customizer.php:157
+#: inc/customizer.php:122
 msgid "Excerpt with thumbnail"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:135
 msgid "Archive Image Size"
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:152
 msgid "Archive Image Alignment"
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:169
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer.php:213
+#: inc/customizer.php:178
 msgid "Blog Options"
 msgstr ""
 
-#: inc/customizer.php:229
+#: inc/customizer.php:194
 msgid "Read more text"
 msgstr ""
 
-#: inc/customizer.php:245
+#: inc/customizer.php:210
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer.php:254
+#: inc/customizer.php:219
 msgid "Search Options"
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:235
 msgid "Search Placeholder"
 msgstr ""
 
-#: inc/customizer.php:279
+#: inc/customizer.php:244
 msgid "Pagination Options"
 msgstr ""
 
-#: inc/customizer.php:294
+#: inc/customizer.php:259
 msgid "Pagination Type"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:264
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:300
+#: inc/customizer.php:265
 msgid "Numeric"
 msgstr ""
 
-#: inc/customizer.php:307
+#: inc/customizer.php:272
 msgid "Footer Options"
 msgstr ""
 
-#: inc/customizer.php:325
+#: inc/customizer.php:290
 msgid "Copyright text"
 msgstr ""
 
-#: inc/customizer.php:340
+#: inc/customizer.php:305
 msgid "Show Powered By"
 msgstr ""
 
-#: inc/customizer.php:355
+#: inc/customizer.php:320
 msgid "Enable Go To Top"
 msgstr ""
 
