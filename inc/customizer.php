@@ -19,19 +19,6 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'            => '.site-title a',
-			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'            => '.site-description',
-			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_blogdescription',
-		) );
-	}
-
 	// Add Panel.
 	$wp_customize->add_panel( 'simple_life_options_panel',
 		array(
@@ -188,6 +175,7 @@ function simple_life_customize_register( $wp_customize ) {
 			'default'           => $simple_life_default_options['read_more_text'],
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control('simple_life_options[read_more_text]', array(
@@ -279,11 +267,10 @@ function simple_life_customize_register( $wp_customize ) {
 	// Setting - copyright_text.
 	$wp_customize->add_setting( 'simple_life_options[copyright_text]',
 		array(
-			'default'              => $simple_life_default_options['copyright_text'],
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'esc_attr',
-			'sanitize_js_callback' => 'esc_attr',
-			'transport'            => 'postMessage',
+			'default'           => $simple_life_default_options['copyright_text'],
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control('simple_life_options[copyright_text]', array(
@@ -408,3 +395,43 @@ if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 }
+
+/**
+ * Customizer partials.
+ *
+ * @since 1.0.0
+ */
+function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
+
+	if ( ! isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->get_setting( 'simple_life_options[copyright_text]' )->transport = 'refresh';
+		$wp_customize->get_setting( 'simple_life_options[read_more_text]' )->transport = 'refresh';
+		return;
+	}
+
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector'            => '.site-title a',
+		'container_inclusive' => false,
+		'render_callback'     => 'simple_life_customize_partial_blogname',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector'            => '.site-description',
+		'container_inclusive' => false,
+		'render_callback'     => 'simple_life_customize_partial_blogdescription',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'copyright-text', array(
+		'selector'            => '.copyright-text',
+		'settings'            => array( 'simple_life_options[copyright_text]' ),
+		'container_inclusive' => false,
+		'render_callback'     => 'simple_life_customize_partial_copyright_text',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'read-more-text', array(
+		'selector'            => 'a.readmore',
+		'settings'            => array( 'simple_life_options[read_more_text]' ),
+		'container_inclusive' => false,
+		'render_callback'     => 'simple_life_customize_partial_read_more_text',
+	) );
+
+}
+
+add_action( 'customize_register', 'simple_life_customizer_partials', 99 );

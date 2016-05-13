@@ -20,13 +20,6 @@
 		} );
 	} );
 
-	// Copyright.
-	wp.customize( 'simple_life_options[copyright_text]', function( value ) {
-		value.bind( function( to ) {
-			$( '.copyright-text' ).text( to );
-		} );
-	} );
-
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {

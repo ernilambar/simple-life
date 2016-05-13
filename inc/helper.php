@@ -87,7 +87,9 @@ endif;
  * @return void
  */
 function simple_life_customize_partial_blogname() {
+
 	bloginfo( 'name' );
+
 }
 
 /**
@@ -98,5 +100,34 @@ function simple_life_customize_partial_blogname() {
  * @return void
  */
 function simple_life_customize_partial_blogdescription() {
+
 	bloginfo( 'description' );
+
+}
+
+/**
+ * Render the copyright text for the selective refresh partial.
+ *
+ * @since 2.0
+ *
+ * @return void
+ */
+function simple_life_customize_partial_copyright_text() {
+
+	$copyright_text = simple_life_get_option( 'copyright_text' );
+	echo wp_kses_post( $copyright_text );
+
+}
+
+/**
+ * Render the read more text for the selective refresh partial.
+ *
+ * @since 2.0
+ *
+ * @return void
+ */
+function simple_life_customize_partial_read_more_text() {
+
+	echo simple_life_get_option( 'read_more_text' );
+
 }

@@ -43,6 +43,11 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 		add_theme_support( 'custom-logo' );
 
 		/*
+		 * Enable support for partial refresh in Customizer widgets.
+		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 */
 		add_theme_support( 'post-thumbnails' );
