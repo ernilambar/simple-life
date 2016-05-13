@@ -2,12 +2,11 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package Simple_Life
  */
 
 if ( ! function_exists( 'simple_life_paging_nav' ) ) :
+
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 */
@@ -167,6 +166,7 @@ if ( ! function_exists( 'simple_life_post_format_icon' ) ) :
 endif;
 
 if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
+
 	/**
 	 * Displays the optional custom logo.
 	 *
@@ -188,4 +188,5 @@ if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
 		}
 
 	}
+
 endif;

@@ -167,11 +167,12 @@ function simple_life_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control('simple_life_options[archive_image_thumbnail_size]', array(
-		  'label'    => __( 'Archive Image Size', 'simple-life' ),
-		  'section'  => 'simple_life_options_general',
-		  'type'     => 'select',
-		  'priority' => 120,
-		  'choices'  => simple_life_get_image_sizes_options( false ),
+			'label'           => __( 'Archive Image Size', 'simple-life' ),
+			'section'         => 'simple_life_options_general',
+			'type'            => 'select',
+			'priority'        => 120,
+			'choices'         => simple_life_get_image_sizes_options( false ),
+			'active_callback' => 'simple_life_is_non_excerpt_content_layout_active',
 	));
 
 	// Setting - archive_image_alignment.
@@ -183,11 +184,12 @@ function simple_life_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control('simple_life_options[archive_image_alignment]', array(
-		  'label'    => __( 'Archive Image Alignment', 'simple-life' ),
-		  'section'  => 'simple_life_options_general',
-		  'type'     => 'select',
-		  'priority' => 125,
-		  'choices'  => simple_life_get_image_alignment_options(),
+			'label'           => __( 'Archive Image Alignment', 'simple-life' ),
+			'section'         => 'simple_life_options_general',
+			'type'            => 'select',
+			'priority'        => 125,
+			'choices'         => simple_life_get_image_alignment_options(),
+			'active_callback' => 'simple_life_is_non_excerpt_content_layout_active',
 	));
 
 	// Setting - enable_breadcrumb.
@@ -363,6 +365,33 @@ add_action( 'customize_register', 'simple_life_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function simple_life_customize_preview_js() {
-	wp_enqueue_script( 'simple_life_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_script( 'simple-life-customizer', get_template_directory_uri() . '/js/customizer' . $min . '.js', array( 'customize-preview' ), '2.0.0', true );
+
 }
 add_action( 'customize_preview_init', 'simple_life_customize_preview_js' );
+
+if ( ! function_exists( 'simple_life_is_non_excerpt_content_layout_active' ) ) :
+
+	/**
+	 * Check if non excerpt content layout is active.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param WP_Customize_Control $control WP_Customize_Control instance.
+	 *
+	 * @return bool Whether the control is active to the current preview.
+	 */
+	function simple_life_is_non_excerpt_content_layout_active( $control ) {
+
+		if ( 'excerpt' !== $control->manager->get_setting( 'simple_life_options[content_layout]' )->value() ) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+endif;

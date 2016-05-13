@@ -14,22 +14,20 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function simple_life_setup() {
+
 		global $content_width;
 
 		/**
-	 * Set the content width based on the theme's design and stylesheet.
-	 */
+		 * Set the content width based on the theme's design and stylesheet.
+		 */
 		if ( ! isset( $content_width ) ) {
-			$content_width = 800; /* Pixels. */
+			$content_width = 800;
 		}
 
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Simple Life, use a find and replace
-		 * to change 'simple-life' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'simple-life', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'simple-life' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -151,6 +149,7 @@ function simple_life_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'simple_life_scripts' );
 
