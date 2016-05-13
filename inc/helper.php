@@ -31,28 +31,48 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	/**
 	 * Returns image sizes options.
 	 *
-	 * @since Simple Life 1.2
+	 * @since 1.2
 	 *
-	 * @param bool $add_disable Add whether disable option or not.
+	 * @param bool $add_disable Add disable option or not.
+	 * @param array $allowed Allowed array.
+	 * @param bool $show_dimension Show or hide dimension.
 	 */
-	function simple_life_get_image_sizes_options( $add_disable = true ) {
+	function simple_life_get_image_sizes_options( $add_disable = true, $allowed = array(), $show_dimension = true ) {
 
 		global $_wp_additional_image_sizes;
 		$get_intermediate_image_sizes = get_intermediate_image_sizes();
 		$choices = array();
 		if ( true === $add_disable ) {
-			$choices['disable'] = __( 'No Image', 'simple-life' );
+			$choices['disable'] = esc_html__( 'No Image', 'simple-life' );
 		}
-		foreach ( array( 'thumbnail', 'medium', 'large' ) as $key => $_size ) {
-			$choices[ $_size ] = $_size . ' ('. get_option( $_size . '_size_w' ) . 'x' . get_option( $_size . '_size_h' ) . ')';
-		}
-		$choices['full'] = _x( 'full (original)', 'image size', 'simple-life' );
-		if ( ! empty( $_wp_additional_image_sizes ) && is_array( $_wp_additional_image_sizes ) ) {
+		$choices['thumbnail'] = esc_html__( 'Thumbnail', 'simple-life' );
+		$choices['medium']    = esc_html__( 'Medium', 'simple-life' );
+		$choices['large']     = esc_html__( 'Large', 'simple-life' );
+		$choices['full']      = esc_html__( 'Full (original)', 'simple-life' );
 
-			foreach ( $_wp_additional_image_sizes as $key => $size ) {
-				$choices[ $key ] = $key . ' ('. $size['width'] . 'x' . $size['height'] . ')';
+		if ( true === $show_dimension ) {
+			foreach ( array( 'thumbnail', 'medium', 'large' ) as $key => $_size ) {
+				$choices[ $_size ] = $choices[ $_size ] . ' (' . get_option( $_size . '_size_w' ) . 'x' . get_option( $_size . '_size_h' ) . ')';
 			}
 		}
+
+		if ( ! empty( $_wp_additional_image_sizes ) && is_array( $_wp_additional_image_sizes ) ) {
+			foreach ( $_wp_additional_image_sizes as $key => $size ) {
+				$choices[ $key ] = $key;
+				if ( true === $show_dimension ){
+					$choices[ $key ] .= ' ('. $size['width'] . 'x' . $size['height'] . ')';
+				}
+			}
+		}
+
+		if ( ! empty( $allowed ) ) {
+			foreach ( $choices as $key => $value ) {
+				if ( ! in_array( $key, $allowed ) ) {
+					unset( $choices[ $key ] );
+				}
+			}
+		}
+
 		return $choices;
 
 	}

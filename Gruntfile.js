@@ -33,7 +33,7 @@ module.exports = function( grunt ) {
 						'Language': 'en_US',
 						'X-Poedit-SearchPath-0': '../../<%= pkg.name %>',
 						'plural-forms': 'nplurals=2; plural=(n != 1);',
-						'Last-Translator': 'Nilambar Sharma <nilambar@outlook.com>',
+						'Last-Translator': 'Nilambar Sharma <nilambar@outlook.com>'
 					}
 				}
 			}

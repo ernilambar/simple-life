@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Simple Life 1.9\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: Simple Life 2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ernilambar/simple-life/issues\n"
 "POT-Creation-Date: 2016-04-18 09:49:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -177,7 +177,7 @@ msgid "Full Post (with image)"
 msgstr ""
 
 #: inc/customizer.php:156
-msgid "Excerpt"
+msgid "Excerpt Only"
 msgstr ""
 
 #: inc/customizer.php:157
@@ -248,8 +248,24 @@ msgstr ""
 msgid "Enable Go To Top"
 msgstr ""
 
-#: inc/helper.php:44
+#: inc/helper.php:46
 msgid "No Image"
+msgstr ""
+
+#: inc/helper.php:48
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/helper.php:49
+msgid "Medium"
+msgstr ""
+
+#: inc/helper.php:50
+msgid "Large"
+msgstr ""
+
+#: inc/helper.php:51
+msgid "Full (original)"
 msgstr ""
 
 #: inc/supports/footer-widgets.php:88
@@ -383,11 +399,6 @@ msgstr ""
 #: inc/helper.php:21
 msgctxt "Alignment"
 msgid "Right"
-msgstr ""
-
-#: inc/helper.php:49
-msgctxt "image size"
-msgid "full (original)"
 msgstr ""
 
 #: lib/breadcrumbs.php:245

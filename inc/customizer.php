@@ -153,7 +153,7 @@ function simple_life_customize_register( $wp_customize ) {
 		  'priority' => 115,
 		  'choices'  => array(
 			'full'          => __( 'Full Post (with image)', 'simple-life' ),
-			'excerpt'       => __( 'Excerpt', 'simple-life' ),
+			'excerpt'       => __( 'Excerpt Only', 'simple-life' ),
 			'excerpt-thumb' => __( 'Excerpt with thumbnail', 'simple-life' ),
 			),
 	));
