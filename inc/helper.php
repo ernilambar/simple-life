@@ -15,10 +15,10 @@ if ( ! function_exists( 'simple_life_get_image_alignment_options' ) ) :
 	function simple_life_get_image_alignment_options() {
 
 		$choices = array(
-		'none'   => _x( 'None', 'Alignment', 'simple-life' ),
-		'left'   => _x( 'Left', 'Alignment', 'simple-life' ),
-		'center' => _x( 'Center', 'Alignment', 'simple-life' ),
-		'right'  => _x( 'Right', 'Alignment', 'simple-life' ),
+			'none'   => _x( 'None', 'Alignment', 'simple-life' ),
+			'left'   => _x( 'Left', 'Alignment', 'simple-life' ),
+			'center' => _x( 'Center', 'Alignment', 'simple-life' ),
+			'right'  => _x( 'Right', 'Alignment', 'simple-life' ),
 		);
 		return $choices;
 

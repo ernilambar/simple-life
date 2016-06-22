@@ -268,7 +268,7 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 		$breadcrumb_args = array(
 			'container'   => 'div',
 			'show_browse' => false,
-			);
+		);
 
 		breadcrumb_trail( $breadcrumb_args );
 

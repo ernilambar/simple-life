@@ -29,7 +29,7 @@
  * @since  0.1.0
  * @access public
  * @param  array $args Arguments to pass to Breadcrumb_Trail.
- * @return void
+ * @return void|string
  */
 function breadcrumb_trail( $args = array() ) {
 
