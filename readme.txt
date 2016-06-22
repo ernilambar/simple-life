@@ -1,9 +1,8 @@
 === Simple Life ===
 Contributors: rabmalin
-Tags: light, white, gray, blue, one-column, two-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, translation-ready, responsive-layout, accessibility-ready
 Requires at least: 4.3
-Tested up to: 4.5
-Stable tag: 2.0
+Tested up to: 4.5.3
+Stable tag: 2.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,6 +18,10 @@ Simple Life is a simple and minimal theme for your awesome WordPress website. It
 This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerce and many more.
 
 == Changelog ==
+
+= 2.1 - Jun 22 2016 =
+* Update theme tags
+* Minor bug fixes
 
 = 2.0 - May 12 2016 =
 * Add support for Customize selective partial refresh for widgets
