@@ -260,7 +260,7 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 
 		// Load library if not exists.
 		if ( ! function_exists( 'breadcrumb_trail' ) ) {
-			require get_template_directory() . '/lib/breadcrumbs.php';
+			require_once get_template_directory() . '/lib/breadcrumbs.php';
 		}
 
 		echo '<div id="breadcrumb"><div class="container"><div class="row"><div class="col-sm-12">';

@@ -133,9 +133,9 @@ function simple_life_scripts() {
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_style( 'simple-life-style-open-sans', '//fonts.googleapis.com/css?family=Open+Sans' );
-	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap' . $min . '.css', false ,'3.3.6' );
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome' . $min . '.css', false ,'4.6.1' );
-	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu' . $min . '.css', false ,'2.0.6' );
+	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap' . $min . '.css', false, '3.3.6' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome' . $min . '.css', false, '4.6.1' );
+	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu' . $min . '.css', false, '2.0.6' );
 
 	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri(), array(), '2.2' );
 
