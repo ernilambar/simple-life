@@ -1,8 +1,8 @@
 === Simple Life ===
 Contributors: rabmalin
-Requires at least: 4.3
-Tested up to: 4.5.3
-Stable tag: 2.1
+Requires at least: 4.4
+Tested up to: 4.6.1
+Stable tag: 2.2
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,9 +19,11 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 == Changelog ==
 
+= 2.2 - Sep 25 2016 =
+* Minor bug fixes
+
 = 2.1 - Jun 22 2016 =
 * Update theme tags
-* Minor bug fixes
 
 = 2.0 - May 12 2016 =
 * Add support for Customize selective partial refresh for widgets
