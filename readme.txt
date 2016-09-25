@@ -20,6 +20,7 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 == Changelog ==
 
 = 2.2 - Sep 25 2016 =
+* Update primary navigation fallback
 * Minor bug fixes
 
 = 2.1 - Jun 22 2016 =

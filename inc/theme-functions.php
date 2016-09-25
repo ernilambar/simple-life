@@ -146,12 +146,18 @@ if ( ! function_exists( 'simple_life_primary_menu_fallback' ) ) :
 	function simple_life_primary_menu_fallback() {
 
 		echo '<ul>';
-		echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . __( 'Home', 'simple-life' ). '</a></li>';
-		wp_list_pages( array(
-			'title_li' => '',
-			'depth'    => 1,
-			'number'   => 10,
-		) );
+		echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . __( 'Home', 'simple-life' ) . '</a></li>';
+		$args = array(
+			'number'       => 8,
+			'hierarchical' => false,
+			'sort_column'  => 'menu_order, post_title',
+			);
+		$pages = get_pages( $args );
+		if ( is_array( $pages ) && ! empty( $pages ) ) {
+			foreach ( $pages as $page ) {
+				echo '<li><a href="' . esc_url( get_permalink( $page->ID ) ) . '">' . esc_html( get_the_title( $page->ID ) ) . '</a></li>';
+			}
+		}
 		echo '</ul>';
 
 	}
