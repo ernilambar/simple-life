@@ -101,7 +101,7 @@ msgid "Footer Menu"
 msgstr ""
 
 #: footer.php:55
-msgid "http://wordpress.org/"
+msgid "https://wordpress.org/"
 msgstr ""
 
 #: footer.php:55

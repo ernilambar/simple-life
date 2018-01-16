@@ -1,15 +1,15 @@
 === Simple Life ===
 Contributors: rabmalin
-Requires at least: 4.4
-Tested up to: 4.6.1
-Stable tag: 2.2
+Requires at least: 4.7
+Tested up to: 4.9.1
+Stable tag: 2.3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Simple and minimal WordPress theme.
 
 == Description ==
-Simple Life is a simple and minimal theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. Built on HTML5, CSS3, it has a responsive design which lets the content automatically adapt to the screen's size on different devices. This theme is easily customizable with the Customizer feature of WordPress. It supports popular plugins such as WP-PageNavi, Contact Form 7, WooCommerce and many more. It is also translation ready and accessibility ready. If you need support with this theme, please go to http://wordpress.org/support/theme/simple-life
+Simple Life is a simple and minimal theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. Built on HTML5, CSS3, it has a responsive design which lets the content automatically adapt to the screen's size on different devices. This theme is easily customizable with the Customizer feature of WordPress. It supports popular plugins such as WP-PageNavi, Contact Form 7, WooCommerce and many more. It is also translation ready and accessibility ready. If you need support with this theme, please go to https://wordpress.org/support/theme/simple-life
 
 == Frequently Asked Questions ==
 
@@ -18,6 +18,9 @@ Simple Life is a simple and minimal theme for your awesome WordPress website. It
 This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerce and many more.
 
 == Changelog ==
+
+= 2.3 - Jan 15 2018 =
+* Minor bug fixes
 
 = 2.2 - Sep 25 2016 =
 * Update primary navigation fallback
