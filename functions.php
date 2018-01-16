@@ -86,7 +86,7 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 
 		// Editor style.
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		add_editor_style( 'css/editor-style' . $min . '.css', '//fonts.googleapis.com/css?family=Open+Sans' );
+		add_editor_style( 'css/editor-style' . $min . '.css', 'https://fonts.googleapis.com/css?family=Open+Sans' );
 
 		// Setup the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters(
