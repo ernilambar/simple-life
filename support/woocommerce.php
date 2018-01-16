@@ -12,7 +12,8 @@ add_action( 'after_setup_theme', 'simple_life_add_woocommerce_support' );
  */
 function simple_life_add_woocommerce_support() {
 
-    add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
 
 }
 

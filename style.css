@@ -1132,6 +1132,10 @@ body.search-no-results .page-content {
 	left: 1em;
 	top: 1em;
 }
+.woocommerce .products .star-rating {
+	display: inline-block;
+	text-align: center;
+}
 /*woocommerce ends*/
 
 /* go to top */
