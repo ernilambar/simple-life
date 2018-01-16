@@ -1,14 +1,14 @@
-# Copyright (C) 2016 Nilambar Sharma
+# Copyright (C) 2018 Nilambar Sharma
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Simple Life 2.2\n"
+"Project-Id-Version: Simple Life 2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/ernilambar/simple-life/issues\n"
 "POT-Creation-Date: 2016-04-18 09:49:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nilambar Sharma <nilambar@outlook.com>\n"
 "Language-Team: \n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -354,7 +354,7 @@ msgid "Simple Life"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://nilambar.net/2015/03/simple-life-free-wordpress-theme.html"
+msgid "https://nilambar.net/2015/03/simple-life-free-wordpress-theme.html"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -371,7 +371,7 @@ msgid "Nilambar Sharma"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://nilambar.net/"
+msgid "https://nilambar.net/"
 msgstr ""
 
 #: comments.php:29
