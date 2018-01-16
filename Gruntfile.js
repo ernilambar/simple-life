@@ -172,7 +172,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build', [
 		'cssmin',
 		'uglify',
-		'checktextdomain',
+		'addtextdomain',
 		'makepot'
 	]);
 

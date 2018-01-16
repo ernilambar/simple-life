@@ -27,19 +27,24 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:32
+#. translators: 1: title.
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:47 comments.php:64
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38 comments.php:55
+#: comments.php:48 comments.php:65
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:39 comments.php:56
+#: comments.php:49 comments.php:66
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:66
+#: comments.php:76
 msgid "Comments are closed."
 msgstr ""
 
@@ -374,7 +379,8 @@ msgstr ""
 msgid "https://nilambar.net/"
 msgstr ""
 
-#: comments.php:29
+#: comments.php:38
+#. translators: 1: comment count number, 2: title.
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
