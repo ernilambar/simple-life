@@ -428,17 +428,17 @@ msgid "g a"
 msgstr ""
 
 #: lib/breadcrumbs.php:758 lib/breadcrumbs.php:787 lib/breadcrumbs.php:814
-#: lib/breadcrumbs.php:841 lib/breadcrumbs.php:1176
+#: lib/breadcrumbs.php:841 lib/breadcrumbs.php:1182
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: lib/breadcrumbs.php:759 lib/breadcrumbs.php:815 lib/breadcrumbs.php:1180
+#: lib/breadcrumbs.php:759 lib/breadcrumbs.php:815 lib/breadcrumbs.php:1186
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr ""
 
-#: lib/breadcrumbs.php:760 lib/breadcrumbs.php:1184
+#: lib/breadcrumbs.php:760 lib/breadcrumbs.php:1190
 msgctxt "daily archives date format"
 msgid "j"
 msgstr ""
