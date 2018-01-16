@@ -121,19 +121,19 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:116
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:118
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:149
 msgid "expand menu"
 msgstr ""
 
-#: functions.php:151
+#: functions.php:150
 msgid "collapse menu"
 msgstr ""
 
