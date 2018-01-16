@@ -29,7 +29,7 @@
 		);
 		?>
 		<?php if ( ! empty( $footer_nav ) ) : ?>
-			<nav class="social-navigation" role="navigation" aria-label="<?php _e( 'Footer Menu', 'simple-life' ); ?>">
+			<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'simple-life' ); ?>">
 			<?php echo $footer_nav; ?>
 			</nav>
 		<?php endif ?>
@@ -39,9 +39,9 @@
 	?>
 	<?php if ( ! empty( $copyright_text ) ) : ?>
 
-    <div id="copyright-wrap">
-      <div class="copyright-text"><?php echo wp_kses_post( $copyright_text ); ?></div>
-    </div>
+		<div id="copyright-wrap">
+			<div class="copyright-text"><?php echo wp_kses_post( $copyright_text ); ?></div>
+		</div>
 
 	<?php endif ?>
 
