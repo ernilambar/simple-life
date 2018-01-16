@@ -115,7 +115,6 @@ module.exports = function( grunt ) {
 					'!test.php',
 					'!package.json',
 					'!node_modules/**',
-					'!languages/**',
 					'!tests/**',
 					'!docs/**'
 				],

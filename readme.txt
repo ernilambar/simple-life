@@ -20,6 +20,7 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 == Changelog ==
 
 = 2.3 - Jan 15 2018 =
+* Fix gallery widget
 * Minor bug fixes
 
 = 2.2 - Sep 25 2016 =
