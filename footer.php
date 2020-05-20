@@ -34,30 +34,27 @@
 			</nav>
 		<?php endif ?>
 
-	<?php
-	$copyright_text = simple_life_get_option( 'copyright_text' );
-	?>
+	<?php $copyright_text = simple_life_get_option( 'copyright_text' ); ?>
+
 	<?php if ( ! empty( $copyright_text ) ) : ?>
 
 		<div id="copyright-wrap">
 			<div class="copyright-text"><?php echo wp_kses_post( $copyright_text ); ?></div>
 		</div>
 
-	<?php endif ?>
+	<?php endif; ?>
 
-	<?php
-		$powered_by = simple_life_get_option( 'powered_by' );
-	?>
+	<?php $powered_by = simple_life_get_option( 'powered_by' ); ?>
 
 	<?php if ( true === $powered_by ) : ?>
 
   		<div class="site-info" id="powered-by-wrap">
   			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'simple-life' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'simple-life' ), 'WordPress' ); ?></a>
   			<span class="sep"> | </span>
-  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="' . esc_url( 'https://nilambar.net/' ) . '" rel="designer">Nilambar</a>' ); ?>
+  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="https://www.nilambar.net/" rel="designer">Nilambar</a>' ); ?>
   		</div><!-- .site-info -->
 
-	<?php endif ?>
+	<?php endif; ?>
 
 	</footer><!-- #colophon -->
 	<?php do_action( 'simple_life_action_after_footer' ); ?>

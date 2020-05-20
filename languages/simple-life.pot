@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Life 2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/simple-life\n"
-"POT-Creation-Date: 2020-05-20 07:16:00+00:00\n"
+"POT-Creation-Date: 2020-05-20 07:18:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,15 +99,15 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: footer.php:55
+#: footer.php:52
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:55
+#: footer.php:52
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:57
+#: footer.php:54
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
