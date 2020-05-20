@@ -42,6 +42,12 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 		 */
 		add_theme_support( 'custom-logo' );
 
+		// Load default block styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for responsive embeds.
+		add_theme_support( 'responsive-embeds' );
+
 		/*
 		 * Enable support for partial refresh in Customizer widgets.
 		 */
