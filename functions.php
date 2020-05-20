@@ -72,6 +72,8 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 			'comment-list',
 			'gallery',
 			'caption',
+			'script',
+			'style',
 		) );
 
 		/*
@@ -144,9 +146,6 @@ function simple_life_scripts() {
 
 	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri(), array(), '2.4' );
 
-	// Load the html5 shiv.
-	wp_enqueue_script( 'simple-life-html5', get_template_directory_uri() . '/js/html5' . $min . '.js', array(), '3.7.3' );
-	wp_script_add_data( 'simple-life-html5', 'conditional', 'lt IE 9' );
 	wp_enqueue_script( 'simple-life-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu' . $min . '.js', array( 'jquery' ), '2.0.6', true );
@@ -159,8 +158,8 @@ function simple_life_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
+
 add_action( 'wp_enqueue_scripts', 'simple_life_scripts' );
 
 /**
