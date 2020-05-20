@@ -1,8 +1,10 @@
 === Simple Life ===
+
 Contributors: rabmalin
-Requires at least: 4.7
-Tested up to: 4.9.1
-Stable tag: 2.3
+Requires at least: 5.2
+Tested up to: 5.4
+Requires PHP: 5.6.20
+Stable tag: 2.4
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,6 +20,9 @@ Simple Life is a simple and minimal theme for your awesome WordPress website. It
 This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerce and many more.
 
 == Changelog ==
+
+= 2.4 - May 20 2020 =
+* Minor bug fixes
 
 = 2.3 - Jan 15 2018 =
 * Fix gallery widget
