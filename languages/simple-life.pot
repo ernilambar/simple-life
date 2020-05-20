@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Life 2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/simple-life\n"
-"POT-Creation-Date: 2020-05-20 05:47:43+00:00\n"
+"POT-Creation-Date: 2020-05-20 07:16:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: footer.php:32 functions.php:57
+#: footer.php:32 functions.php:63
 msgid "Footer Menu"
 msgstr ""
 
@@ -111,23 +111,23 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:56 header.php:48
+#: functions.php:62 header.php:48
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:124
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:126
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:149
+#: functions.php:154
 msgid "expand menu"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:155
 msgid "collapse menu"
 msgstr ""
 
