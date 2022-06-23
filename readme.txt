@@ -1,10 +1,10 @@
 === Simple Life ===
 
 Contributors: rabmalin
-Requires at least: 5.2
-Tested up to: 5.4
-Requires PHP: 5.6.20
-Stable tag: 2.4
+Requires at least: 5.4
+Tested up to: 6.0
+Requires PHP: 5.6
+Stable tag: 2.5.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,10 @@ Simple Life is a simple and minimal theme for your awesome WordPress website. It
 This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerce and many more.
 
 == Changelog ==
+
+= 2.5.0 - Jun 23 2020 =
+* WP 6.0 compatibility
+* Minor bug fixes
 
 = 2.4 - May 20 2020 =
 * Minor bug fixes
@@ -112,7 +116,3 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 * Font Awesome is fully open source and is GPL friendly (http://fortawesome.github.io/Font-Awesome/)
 * jquery.meanmenu.js released by Chris Wharton (https://github.com/meanthemes/meanMenu) under GPLv3 license
 * Google Fonts - Apache License, version 2.0
-
-== Images ==
-* https://pixabay.com/en/roadway-seaside-cloudy-sky-water-1149579/ (CC0)
-* https://pixabay.com/en/sea-boat-clouds-cumulous-marine-84629/ (CC0)
