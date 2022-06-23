@@ -1,18 +1,19 @@
 # Editors
 project.xml
 project.properties
-/nbproject/private/
+nbproject/private/
 .buildpath
 .project
 .settings*
 .idea
 
-# Grunt
-/node_modules/
-/deploy/
+# Node
+node_modules/
+deploy/
+build/
 
 # Docs
-/docs/
+docs/
 
 # Sass
 .sass-cache/
@@ -22,3 +23,9 @@ project.properties
 
 # Windows junk
 Thumbs.db
+
+# Environment
+.env
+
+# Map
+*.map

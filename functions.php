@@ -5,6 +5,10 @@
  * @package Simple_Life
  */
 
+if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
+	define( 'SIMPLE_LIFE_VERSION', '2.5.0' );
+}
+
 if ( ! function_exists( 'simple_life_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -144,12 +148,12 @@ function simple_life_scripts() {
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome' . $min . '.css', false, '4.7.0' );
 	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu' . $min . '.css', false, '2.0.6' );
 
-	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri(), array(), '2.4' );
+	wp_enqueue_style( 'simple-life-style', get_stylesheet_uri(), array(), SIMPLE_LIFE_VERSION );
 
-	wp_enqueue_script( 'simple-life-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), '20120206', true );
+	wp_enqueue_script( 'simple-life-navigation', get_template_directory_uri() . '/js/navigation' . $min . '.js', array(), SIMPLE_LIFE_VERSION, true );
 
 	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu' . $min . '.js', array( 'jquery' ), '2.0.6', true );
-	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery', 'simple-life-meanmenu-script' ), '1.8', true );
+	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery', 'simple-life-meanmenu-script' ), SIMPLE_LIFE_VERSION, true );
 	wp_localize_script( 'simple-life-custom', 'Simple_Life_Screen_Reader_Text', array(
 		'expand'   => __( 'expand menu', 'simple-life' ),
 		'collapse' => __( 'collapse menu', 'simple-life' ),
@@ -200,7 +204,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Third Party Compatibility.
  */
-if ( class_exists( 'WooCommerce' ) ) {
+if ( class_exists( 'WooCommerce', false ) ) {
 	require get_template_directory() . '/support/woocommerce.php';
 }
 

@@ -1,22 +1,30 @@
 {
   "name": "simple-life",
   "title": "Simple Life",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "license": "GPL-2.0+",
   "main": "gulpfile.js",
   "repository": "github:ernilambar/simple-life",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp deploy",
+    "pot": "npm run textdomain && npm run language",
+    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
+    "dotenv": "^16.0.1",
     "gulp": "^4.0.2",
     "gulp-jshint": "^2.1.0",
     "gulp-load-plugins": "^1.6.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
-    "gulp-run": "^1.7.1",
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.1",
     "jshint": "^2.11.1",
-    "node-wp-i18n": "^1.2.3"
+    "node-wp-i18n": "^1.2.6"
   }
 }
