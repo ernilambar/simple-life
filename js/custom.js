@@ -5,6 +5,7 @@
 	$( document ).ready( function( $ ) {
 
 		$( '.widget' ).find( 'ul' ).addClass( 'list-unstyled' );
+		$( '.widget' ).find( 'ol' ).addClass( 'list-unstyled' );
 
 		$( '#site-navigation' ).meanmenu( {
 			meanScreenWidth: '640',

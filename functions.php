@@ -143,7 +143,7 @@ function simple_life_scripts() {
 
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'simple-life-style-open-sans', '//fonts.googleapis.com/css?family=Open+Sans' );
+	wp_enqueue_style( 'simple-life-style-open-sans', wptt_get_webfont_url( 'https://fonts.googleapis.com/css?family=Open+Sans' ) );
 	wp_enqueue_style( 'simple-life-style-bootstrap', get_template_directory_uri().'/third-party/bootstrap/css/bootstrap' . $min . '.css', false, '3.3.6' );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/third-party/font-awesome/css/font-awesome' . $min . '.css', false, '4.7.0' );
 	wp_enqueue_style( 'simple-life-style-meanmenu', get_template_directory_uri().'/third-party/meanmenu/meanmenu' . $min . '.css', false, '2.0.6' );
@@ -200,6 +200,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * WebFont Loader.
+ */
+require get_template_directory() . '/inc/wptt-webfont-loader.php';
 
 /**
  * Third Party Compatibility.

@@ -1007,16 +1007,31 @@ body{
 	content: '\f105';
 	margin: 0 5px 0 -15px;
 	color: #0b789c;
+	position: absolute;
 }
 
 .widget_recent_comments #recentcomments li:before{
 	content: '\f0e5';
-
 }
 .nav-links i.fa{
 	color: #0b789c;
 }
 
+.widget-area ol.wp-block-latest-comments {
+	margin-left: 15px;
+}
+
+.widget-area ol.wp-block-latest-comments article {
+	display: inline-block;
+}
+
+.widget-area ol.wp-block-latest-comments li:before {
+	content: '\f0e5';
+}
+
+.widget-area .wp-block-latest-comments__comment {
+	margin-bottom: .4em;
+}
 
 /*footer*/
 footer#colophon {
