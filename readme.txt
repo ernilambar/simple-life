@@ -115,4 +115,4 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Font Awesome is fully open source and is GPL friendly (http://fortawesome.github.io/Font-Awesome/)
 * jquery.meanmenu.js released by Chris Wharton (https://github.com/meanthemes/meanMenu) under GPLv3 license
-* Google Fonts - Apache License, version 2.0
+* Webfonts Loader https://github.com/WPTT/webfont-loader, (C) 2020 WPTT, [MIT](http://opensource.org/licenses/MIT)
