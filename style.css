@@ -1178,22 +1178,22 @@ a.scrollup:focus {
 	margin-top: 25px;
 }
 
-.breadcrumb-trail ul {
+.breadcrumbs ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.breadcrumb-trail ul li {
+.breadcrumbs ul li {
 	display: inline-block;
 }
 
-.breadcrumb-trail .trail-items li::after {
+.breadcrumbs .breadcrumbs__trail li::after {
 	content: "\002F";
 	padding: 0 5px;
 }
 
-.breadcrumb-trail .trail-items li:last-of-type::after {
+.breadcrumbs .breadcrumbs__trail li:last-of-type::after {
 	display: none;
 }
 

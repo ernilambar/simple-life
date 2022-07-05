@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Nilambar\\AdminNotice\\' => array($vendorDir . '/ernilambar/wp-admin-notice/src'),
+    'Hybrid\\Breadcrumbs\\' => array($vendorDir . '/justintadlock/hybrid-breadcrumbs/src'),
 );
