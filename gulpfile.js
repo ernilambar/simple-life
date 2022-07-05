@@ -4,18 +4,49 @@ require('dotenv').config();
 // Config.
 var rootPath = './';
 
-// Gulp Nodes.
-var gulp        = require( 'gulp' ),
-    gulpPlugins = require( 'gulp-load-plugins' )();
+// Gulp.
+var gulp = require('gulp');
 
+// Zip.
+var zip = require('gulp-zip');
+
+// File system.
 var fs = require('fs');
 
+// Package.
 var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-// Browser sync.
-const browserSync = require('browser-sync').create();
-
+// Delete.
 var del = require('del');
+
+// Browser sync.
+var browserSync = require('browser-sync').create();
+
+// Plumber.
+var plumber = require('gulp-plumber');
+
+// Rename.
+var rename = require('gulp-rename');
+
+// Jshint.
+var jshint = require('gulp-jshint');
+
+// Uglify.
+var uglify = require('gulp-uglify');
+
+// Deploy files list.
+var deploy_files_list = [
+	'**/*',
+	'!composer.json',
+	'!composer.lock',
+	'!gulpfile.js',
+	'!Gruntfile.js',
+	'!package.json',
+	'!package-lock.json',
+	'!**/node_modules/**',
+	'!**/deploy/**',
+	'!**/scripts/**'
+];
 
 // Error Handling.
 var onError = function( err ) {
@@ -24,59 +55,49 @@ var onError = function( err ) {
 };
 
 gulp.task('scripts', function() {
-    const { plumber, rename, uglify, jshint } = gulpPlugins;
     return gulp.src( [rootPath + 'scripts/*.js'] )
 	    .pipe(jshint())
 	    .pipe(jshint.reporter('default'))
 	    .pipe(jshint.reporter('fail'))
-        .pipe(plumber())
-        .pipe(gulp.dest('js'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('js'))
+			.pipe(plumber())
+			.pipe(gulp.dest('js'))
+			.pipe(rename({suffix: '.min'}))
+			.pipe(uglify())
+			.pipe(gulp.dest('js'))
 });
 
-gulp.task( 'watch', function() {
+gulp.task('watch', function() {
     browserSync.init({
-        proxy: process.env.DEV_SERVER_URL,
-        open: true
+			proxy: process.env.DEV_SERVER_URL,
+			open: true
     });
 
     // Watch CSS files.
-    gulp.watch( rootPath + 'style.css' ).on('change',browserSync.reload);
+    gulp.watch(rootPath + 'style.css').on('change',browserSync.reload);
 
     // Watch PHP files.
-    gulp.watch( rootPath + '**/**/*.php' ).on('change',browserSync.reload);
+    gulp.watch(rootPath + '**/**/*.php').on('change',browserSync.reload);
 
     // Watch JS files.
-    gulp.watch( rootPath + 'scripts/*.js', gulp.series( 'scripts' ) ).on('change',browserSync.reload);
+    gulp.watch(rootPath + 'scripts/*.js', gulp.series('scripts') ).on('change',browserSync.reload);
 });
 
+// Clean deploy folder.
 gulp.task('clean:deploy', function() {
-    return del('deploy')
+	return del('deploy')
 });
 
+// Copy to deploy folder.
 gulp.task('copy:deploy', function() {
-	const { zip } = gulpPlugins;
-	var sourceFiles = [
-		'**/*',
-		'!gulpfile.js',
-		'!package.json',
-		'!package-lock.json',
-		'!**/node_modules/**',
-		'!**/deploy/**',
-		'!**/scripts/**'
-	];
-
-	return gulp.src(sourceFiles)
-	    .pipe(gulp.dest('deploy/' + pkg.name))
-	    .pipe(zip(pkg.name + '.zip'))
-	    .pipe(gulp.dest('deploy'))
+	return gulp.src(deploy_files_list, { base: '.' })
+			.pipe(gulp.dest('deploy/' + pkg.name))
+			.pipe(zip(pkg.name + '.zip'))
+			.pipe(gulp.dest('deploy'))
 });
 
 // Tasks.
-gulp.task( 'default', gulp.series('watch'));
+gulp.task('default', gulp.series('watch'));
 
-gulp.task( 'build', gulp.series('scripts'));
+gulp.task('build', gulp.series('scripts'));
 
-gulp.task( 'deploy', gulp.series('clean:deploy', 'copy:deploy'));
+gulp.task('deploy', gulp.series('clean:deploy', 'copy:deploy'));
