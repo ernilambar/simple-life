@@ -212,6 +212,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/wptt-webfont-loader.php';
 
 /**
+ * Load welcome.
+ */
+require get_template_directory() . '/inc/welcome/welcome.php';
+
+/**
  * Third Party Compatibility.
  */
 if ( class_exists( 'WooCommerce', false ) ) {
