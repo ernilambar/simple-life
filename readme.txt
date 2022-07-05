@@ -1,10 +1,10 @@
 === Simple Life ===
 
 Contributors: rabmalin
-Requires at least: 5.4
+Requires at least: 4.9
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,10 @@ This theme supports several plugins like WP-PageNavi, Contact Form 7, WooCommerc
 
 == Changelog ==
 
-= 2.5.0 - Jun 23 2020 =
+= 2.5.1 - Jul 5 2022 =
+* Minor bug fixes
+
+= 2.5.0 - Jun 23 2022 =
 * WP 6.0 compatibility
 * Minor bug fixes
 
