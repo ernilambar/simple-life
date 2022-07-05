@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Life 2.5.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/simple-life\n"
-"POT-Creation-Date: 2022-07-05 05:52:59+00:00\n"
+"POT-Creation-Date: 2022-07-05 06:06:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: footer.php:32 functions.php:67
+#: footer.php:32 functions.php:72
 msgid "Footer Menu"
 msgstr ""
 
@@ -111,23 +111,23 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:66 header.php:48
+#: functions.php:71 header.php:48
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:133
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:135
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:158
+#: functions.php:163
 msgid "expand menu"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:164
 msgid "collapse menu"
 msgstr ""
 
@@ -295,6 +295,10 @@ msgstr ""
 msgid "Go to top"
 msgstr ""
 
+#. Theme Name of the plugin/theme
+msgid "Simple Life"
+msgstr ""
+
 #: inc/theme-functions.php:55
 msgid "Read more"
 msgstr ""
@@ -346,10 +350,6 @@ msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Simple Life"
 msgstr ""
 
 #. Theme URI of the plugin/theme

@@ -279,3 +279,22 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 endif;
 
 add_action( 'simple_life_action_after_header', 'simple_life_add_breadcrumb' );
+
+
+/**
+ * Add admin notice.
+ *
+ * @since 2.5.1
+ */
+function simple_life_add_admin_notice() {
+	// Setup notice.
+	\Nilambar\AdminNotice\Notice::init(
+		array(
+			'slug' => 'simple-life',
+			'type' => 'theme',
+			'name' => esc_html__( 'Simple Life', 'simple-life' ),
+		)
+	);
+}
+
+add_action( 'admin_init', 'simple_life_add_admin_notice' );

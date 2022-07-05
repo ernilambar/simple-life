@@ -9,6 +9,11 @@ if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
 	define( 'SIMPLE_LIFE_VERSION', '2.5.1' );
 }
 
+// Load autoload.
+if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
+	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+}
+
 if ( ! function_exists( 'simple_life_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
