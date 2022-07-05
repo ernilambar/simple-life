@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
-	define( 'SIMPLE_LIFE_VERSION', '2.5.0' );
+	define( 'SIMPLE_LIFE_VERSION', '2.5.1' );
 }
 
 if ( ! function_exists( 'simple_life_setup' ) ) :
