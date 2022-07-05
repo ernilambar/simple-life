@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
-	define( 'SIMPLE_LIFE_VERSION', '2.5.1' );
+	define( 'SIMPLE_LIFE_VERSION', '2.5.2' );
 }
 
 // Load autoload.
