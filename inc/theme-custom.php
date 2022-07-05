@@ -254,23 +254,21 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 
 		// Bail if Breadcrumb disabled.
 		$enable_breadcrumb = simple_life_get_option( 'enable_breadcrumb' );
+
 		if ( true !== $enable_breadcrumb ) {
 			return;
-		}
-
-		// Load library if not exists.
-		if ( ! function_exists( 'breadcrumb_trail' ) ) {
-			require_once get_template_directory() . '/lib/breadcrumbs.php';
 		}
 
 		echo '<div id="breadcrumb"><div class="container"><div class="row"><div class="col-sm-12">';
 
 		$breadcrumb_args = array(
-			'container'   => 'div',
-			'show_browse' => false,
+			'show_trail_end' => true,
+			'labels'         => array(
+				'title' => '',
+			),
 		);
 
-		breadcrumb_trail( $breadcrumb_args );
+		\Hybrid\Breadcrumbs\Trail::display( $breadcrumb_args );
 
 		echo '</div><!-- .col-sm-12 --></div></div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
 

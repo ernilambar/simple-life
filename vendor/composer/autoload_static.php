@@ -11,12 +11,20 @@ class ComposerStaticInite5e2b0311486546559c38c652df6d857
         array (
             'Nilambar\\AdminNotice\\' => 21,
         ),
+        'H' => 
+        array (
+            'Hybrid\\Breadcrumbs\\' => 19,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Nilambar\\AdminNotice\\' => 
         array (
             0 => __DIR__ . '/..' . '/ernilambar/wp-admin-notice/src',
+        ),
+        'Hybrid\\Breadcrumbs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justintadlock/hybrid-breadcrumbs/src',
         ),
     );
 
