@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '136861c6bf1be03db08a33c4d09bb88f4c4bee93',
+        'reference' => '12bbf63ce2570e75e3fbe19d6095482dee42726f',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '136861c6bf1be03db08a33c4d09bb88f4c4bee93',
+            'reference' => '12bbf63ce2570e75e3fbe19d6095482dee42726f',
             'dev_requirement' => false,
         ),
         'ernilambar/wp-admin-notice' => array(
