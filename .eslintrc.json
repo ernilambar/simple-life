@@ -13,6 +13,7 @@
 		"simpleLifeScreenReaderText": true
 	},
 	"rules": {
+		"vars-on-top": "warn",
 		"no-console": "error"
 	}
 }
