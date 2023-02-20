@@ -12,6 +12,7 @@ if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
 // Load autoload.
 if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+	require_once get_parent_theme_file_path( 'vendor/ernilambar/wp-welcome/init.php' );
 }
 
 if ( ! function_exists( 'simple_life_setup' ) ) :
