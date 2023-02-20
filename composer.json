@@ -1,6 +1,7 @@
 {
     "require": {
         "ernilambar/wp-admin-notice": "^1.0",
-        "justintadlock/hybrid-breadcrumbs": "^1.0"
+        "justintadlock/hybrid-breadcrumbs": "^1.0",
+        "ernilambar/wp-welcome": "^1.0"
     }
 }

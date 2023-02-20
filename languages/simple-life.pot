@@ -1,14 +1,14 @@
-# <!=Copyright (C) 2022 Nilambar Sharma
+# <!=Copyright (C) 2023 Nilambar Sharma
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Life 2.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/simple-life\n"
-"POT-Creation-Date: 2022-07-09 10:29:22+00:00\n"
+"POT-Creation-Date: 2023-02-20 11:26:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.6\n"
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: footer.php:32 functions.php:72
+#: footer.php:32 functions.php:73
 msgid "Footer Menu"
 msgstr ""
 
@@ -111,23 +111,23 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:71 header.php:48
+#: functions.php:72 header.php:48
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:134
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:136
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:163
+#: functions.php:164
 msgid "expand menu"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:165
 msgid "collapse menu"
 msgstr ""
 
@@ -315,8 +315,8 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: inc/welcome/welcome.php:40
-#. translators: %s: version
+#: inc/welcome/welcome.php:20
+#. translators: %s: Version
 msgid "Version: %s"
 msgstr ""
 
