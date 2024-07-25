@@ -1,17 +1,46 @@
-# <!=Copyright (C) 2023 Nilambar Sharma
-# This file is distributed under the GNU General Public License v3 or later.=!>
+# Copyright (C) 2024 Nilambar Sharma
+# This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Life 2.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/simple-life\n"
-"POT-Creation-Date: 2023-02-20 11:26:03+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.6\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: simple-life\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/theme-custom.php:293
+#: inc/welcome/welcome.php:17
+#: inc/welcome/welcome.php:18
+msgid "Simple Life"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://www.nilambar.net/2015/03/simple-life-free-wordpress-theme.html"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Simple Life is a simple, minimal and accessibility ready theme for your awesome WordPress website. It comes with a whole set of interesting, rich features and flexible theme customization. This theme is easily customizable with the Customizer feature of WordPress. It is also translation ready."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Nilambar Sharma"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.nilambar.net/"
+msgstr ""
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -21,20 +50,31 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: comments.php:32
 #. translators: 1: title.
+#: comments.php:32
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#: comments.php:47 comments.php:64
+#. translators: 1: comment count number, 2: title.
+#: comments.php:38
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:47
+#: comments.php:64
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:48 comments.php:65
+#: comments.php:48
+#: comments.php:65
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:49 comments.php:66
+#: comments.php:49
+#: comments.php:66
 msgid "Newer Comments"
 msgstr ""
 
@@ -46,48 +86,54 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:18
+#. translators: 1: Link to WP admin new post page.
+#: content-none.php:21
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:22
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
 #: content-none.php:27
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: content-page.php:25 content-single.php:29 content.php:71
+#: content-none.php:32
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: content-page.php:25
+#: content-single.php:29
+#: content.php:71
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:31 content-search.php:56 content-single.php:52
+#: content-page.php:31
+#: content-search.php:56
+#: content-single.php:52
 #: content.php:113
 msgid "Edit"
 msgstr ""
 
-#: content-search.php:31 content-search.php:42 content-single.php:38
-#: content-single.php:41 content.php:87 content.php:98
-#. Translators: used between list items, there is a space after the comma.
-#. translators: used between list items, there is a space after the comma
-#. Translators: used between list items, there is a space after the comma.
+#. translators: used between list items, there is a space after the comma.
+#: content-search.php:31
+#: content-search.php:42
+#: content-single.php:38
+#: content-single.php:41
+#: content.php:87
+#: content.php:98
 msgid ", "
 msgstr ""
 
-#: content-search.php:53 content.php:110
+#: content-search.php:53
+#: content.php:110
 msgid "Leave a comment"
 msgstr ""
 
-#: content-search.php:53 content.php:110
+#: content-search.php:53
+#: content.php:110
 msgid "1 Comment"
 msgstr ""
 
-#: content-search.php:53 content.php:110
+#: content-search.php:53
+#: content.php:110
 msgid "% Comments"
 msgstr ""
 
@@ -95,7 +141,8 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: footer.php:32 functions.php:73
+#: footer.php:32
+#: functions.php:73
 msgid "Footer Menu"
 msgstr ""
 
@@ -103,15 +150,18 @@ msgstr ""
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:52
+#. translators: %s: WordPress
+#: footer.php:55
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:54
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:61
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:72 header.php:48
+#: functions.php:72
+#: header.php:48
 msgid "Primary Menu"
 msgstr ""
 
@@ -155,15 +205,18 @@ msgstr ""
 msgid "Site Layout"
 msgstr ""
 
-#. Template Name of the plugin/theme
+#. Template Name of the theme
+#: inc/customizer.php:87
 msgid "Content-Sidebar"
 msgstr ""
 
-#. Template Name of the plugin/theme
+#. Template Name of the theme
+#: inc/customizer.php:88
 msgid "Sidebar-Content"
 msgstr ""
 
-#. Template Name of the plugin/theme
+#. Template Name of the theme
+#: inc/customizer.php:89
 msgid "Full Width"
 msgstr ""
 
@@ -247,6 +300,26 @@ msgstr ""
 msgid "Enable Go To Top"
 msgstr ""
 
+#: inc/helper.php:18
+msgctxt "Alignment"
+msgid "None"
+msgstr ""
+
+#: inc/helper.php:19
+msgctxt "Alignment"
+msgid "Left"
+msgstr ""
+
+#: inc/helper.php:20
+msgctxt "Alignment"
+msgid "Center"
+msgstr ""
+
+#: inc/helper.php:21
+msgctxt "Alignment"
+msgid "Right"
+msgstr ""
+
 #: inc/helper.php:46
 msgid "No Image"
 msgstr ""
@@ -267,7 +340,8 @@ msgstr ""
 msgid "Full (original)"
 msgstr ""
 
-#: inc/supports/footer-widgets.php:88
+#. translators: %s: Column.
+#: inc/supports/footer-widgets.php:89
 msgid "Footer Column %d"
 msgstr ""
 
@@ -295,10 +369,6 @@ msgstr ""
 msgid "Go to top"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Simple Life"
-msgstr ""
-
 #: inc/theme-functions.php:55
 msgid "Read more"
 msgstr ""
@@ -315,62 +385,14 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: inc/welcome/welcome.php:20
 #. translators: %s: Version
+#: inc/welcome/welcome.php:20
 msgid "Version: %s"
 msgstr ""
 
-#: search.php:16
+#. translators: %s: Search query.
+#: search.php:19
 msgid "Search Results for: %s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://www.nilambar.net/2015/03/simple-life-free-wordpress-theme.html"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Simple Life is a simple, minimal and accessibility ready theme for your "
-"awesome WordPress website. It comes with a whole set of interesting, rich "
-"features and flexible theme customization. This theme is easily "
-"customizable with the Customizer feature of WordPress. It is also "
-"translation ready."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Nilambar Sharma"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://www.nilambar.net/"
-msgstr ""
-
-#: comments.php:38
-#. translators: 1: comment count number, 2: title.
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/helper.php:18
-msgctxt "Alignment"
-msgid "None"
-msgstr ""
-
-#: inc/helper.php:19
-msgctxt "Alignment"
-msgid "Left"
-msgstr ""
-
-#: inc/helper.php:20
-msgctxt "Alignment"
-msgid "Center"
-msgstr ""
-
-#: inc/helper.php:21
-msgctxt "Alignment"
-msgid "Right"
 msgstr ""
 
 #: searchform.php:11

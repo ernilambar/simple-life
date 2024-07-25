@@ -34,10 +34,10 @@
 
 	<footer class="entry-footer">
 		<?php
-			/* translators: used between list items, there is a space after the comma */
+			/* translators: used between list items, there is a space after the comma. */
 			$category_list = get_the_category_list( esc_html__( ', ', 'simple-life' ) );
 
-			/* translators: used between list items, there is a space after the comma */
+			/* translators: used between list items, there is a space after the comma. */
 			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 
 			if ( ! empty( $category_list ) ) {

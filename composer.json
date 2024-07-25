@@ -4,6 +4,13 @@
         "ernilambar/wp-welcome": "^2.0",
         "justintadlock/hybrid-breadcrumbs": "^1.0"
     },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "roave/security-advisories": "dev-latest",
+        "wp-cli/i18n-command": "^2.6",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
@@ -12,5 +19,14 @@
         "optimize-autoloader": true,
         "process-timeout": 7200,
         "sort-packages": true
+    },
+    "scripts": {
+        "lint": [
+            "@lint-php",
+						"phpcs"
+        ],
+        "lint-php": "@php ./vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
+        "phpcs": "@php ./vendor/bin/phpcs --report-full --report-summary .",
+        "pot": "./vendor/bin/wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
     }
 }
