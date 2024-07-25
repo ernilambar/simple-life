@@ -49,5 +49,6 @@ npm-debug.log
 build/
 deploy/
 docs/
+js/
 node_modules/
 vendor/
