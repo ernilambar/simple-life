@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad804c743ab29ca4b50bcf29e01f25c8",
+    "content-hash": "ce189e53b3a564ae40d7cc5f44f4fa8c",
     "packages": [
         {
             "name": "ernilambar/wp-admin-notice",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-admin-notice.git",
-                "reference": "1fd14ff6d79994750d25b4f529284a6942e117eb"
+                "reference": "626e4685775bdd06085e7af76f9ae9380c68c9f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/1fd14ff6d79994750d25b4f529284a6942e117eb",
-                "reference": "1fd14ff6d79994750d25b4f529284a6942e117eb",
+                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/626e4685775bdd06085e7af76f9ae9380c68c9f0",
+                "reference": "626e4685775bdd06085e7af76f9ae9380c68c9f0",
                 "shasum": ""
             },
             "require": {
@@ -49,26 +49,32 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-admin-notice/issues/",
-                "source": "https://github.com/ernilambar/wp-admin-notice/tree/1.0.0"
+                "source": "https://github.com/ernilambar/wp-admin-notice/tree/1.0.2"
             },
-            "time": "2022-06-27T07:08:52+00:00"
+            "time": "2023-05-29T05:53:39+00:00"
         },
         {
             "name": "ernilambar/wp-welcome",
-            "version": "1.0.4",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-welcome.git",
-                "reference": "f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e"
+                "reference": "18e12741f799f60875e13fee454ee037694472e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e",
-                "reference": "f3cf2f82d2b5d4701d7c2b95417d2c2a1fdc061e",
+                "url": "https://api.github.com/repos/ernilambar/wp-welcome/zipball/18e12741f799f60875e13fee454ee037694472e7",
+                "reference": "18e12741f799f60875e13fee454ee037694472e7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.2.24"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "wp-coding-standards/wpcs": "^3.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -83,7 +89,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Create welcome page in WordPress. Useful for themes to showcase related information.",
+            "description": "Create welcome page in WordPress",
             "homepage": "https://github.com/ernilambar/wp-welcome",
             "keywords": [
                 "plugin",
@@ -92,9 +98,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-welcome/issues",
-                "source": "https://github.com/ernilambar/wp-welcome/tree/1.0.4"
+                "source": "https://github.com/ernilambar/wp-welcome/tree/2.0.2"
             },
-            "time": "2023-02-13T07:42:14+00:00"
+            "time": "2024-07-23T10:29:35+00:00"
         },
         {
             "name": "justintadlock/hybrid-breadcrumbs",
@@ -152,5 +158,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
