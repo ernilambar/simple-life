@@ -85,6 +85,7 @@ class Simple_Life_Footer_Widgets{
 		for ( $i = 1; $i <= $this->max_widgets; $i++ ) {
 			$wid = ( 1 === $i ) ? 'footer-sidebar' : sprintf( 'footer-sidebar-%d', $i ) ;
 			register_sidebar( array(
+				/* translators: %s: Column. */
 				'name'          => sprintf( __( 'Footer Column %d', 'simple-life' ), $i ),
 				'id'            => $wid,
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',

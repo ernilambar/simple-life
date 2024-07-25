@@ -49,9 +49,17 @@
 	<?php if ( true === $powered_by ) : ?>
 
   		<div class="site-info" id="powered-by-wrap">
-  			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'simple-life' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'simple-life' ), 'WordPress' ); ?></a>
+  			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'simple-life' ) ); ?>">
+					<?php
+					/* translators: %s: WordPress */
+					printf( esc_html__( 'Proudly powered by %s', 'simple-life' ), 'WordPress' );
+					?>
+				</a>
   			<span class="sep"> | </span>
-  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="https://www.nilambar.net/" rel="designer">Nilambar</a>' ); ?>
+  			<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'simple-life' ), 'Simple Life', '<a href="https://www.nilambar.net/" rel="designer">Nilambar</a>' );
+				?>
   		</div><!-- .site-info -->
 
 	<?php endif; ?>

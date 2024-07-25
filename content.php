@@ -83,7 +83,7 @@
 	<footer class="entry-footer">
 		<?php if ( 'post' === get_post_type() ) : // Hide category and tag text for pages on Search. ?>
 			<?php
-				/* Translators: used between list items, there is a space after the comma. */
+				/* translators: used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( esc_html__( ', ', 'simple-life' ) );
 			if ( $categories_list && simple_life_categorized_blog() ) :
 			?>
@@ -94,7 +94,7 @@
 			<?php endif; // End if categories. ?>
 
 			<?php
-				/* Translators: used between list items, there is a space after the comma. */
+				/* translators: used between list items, there is a space after the comma. */
 				$tags_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 			if ( $tags_list ) :
 			?>

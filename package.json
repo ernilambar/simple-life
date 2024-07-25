@@ -28,7 +28,7 @@
     "eslint:fix": "eslint --quiet --fix .",
     "prewpdeploy": "pnpm run deploy",
     "wpdeploy": "wp-deployer",
-    "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "pot": "composer run-script pot",
 		"vendor": "composer install --no-dev --no-scripts -o",
     "clean": "rimraf deploy js vendor",
     "predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
@@ -51,7 +51,6 @@
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "node-wp-i18n": "^1.2.6",
     "packtor": "^1.0.2",
     "rimraf": "^6.0.1",
     "wp-deployer": "^1.0.3"
