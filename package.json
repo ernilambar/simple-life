@@ -1,12 +1,22 @@
 {
-  "name": "simple-life",
-  "title": "Simple Life",
-  "version": "2.5.3",
-  "license": "GPL-2.0+",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ernilambar/simple-life/"
-  },
+	"name": "simple-life",
+	"version": "3.0.0",
+	"description": "Simple Life",
+	"author": "Nilambar Sharma",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"wordpress-theme"
+	],
+	"homepage": "https://github.com/ernilambar/simple-life/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ernilambar/simple-life/"
+	},
+	"bugs": {
+		"url": "https://github.com/ernilambar/simple-life/issues"
+	},
+	"browserslist": "> 1%, not dead",
 	"packtor": {
 		"files": [
 			"**/*",
@@ -20,39 +30,47 @@
 			"!src/**/*"
 		]
 	},
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp build",
-    "version": "easy-replace-in-files",
-    "eslint": "eslint --quiet .",
-    "eslint:fix": "eslint --quiet --fix .",
-    "prewpdeploy": "pnpm run deploy",
-    "wpdeploy": "wp-deployer",
-    "pot": "composer run-script pot",
+	"wpDeployer": {
+		"repoType": "theme",
+		"username": "rabmalin",
+		"buildDir": "deploy/simple-life",
+		"earlierVersion": "2.5.3",
+		"deployAssets": false
+	},
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^12.8.0",
+		"@wordpress/npm-package-json-lint-config": "^5.4.0",
+		"@wordpress/prettier-config": "^4.4.0",
+		"browser-sync": "^2.27.10",
+		"dotenv": "^16.0.1",
+		"easy-replace-in-files": "^1.0.2",
+		"eslint": "^8.21.0",
+		"gulp": "^4.0.2",
+		"gulp-rename": "^2.0.0",
+		"gulp-uglify": "^3.0.2",
+		"npm-package-json-lint": "^8.0.0",
+		"packtor": "^1.0.2",
+		"prettier": "npm:wp-prettier@^3.0.3",
+		"rimraf": "^6.0.1",
+		"wp-deployer": "^1.0.3"
+	},
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build",
+		"format": "prettier \"**/*.{cjs,css,js,json}\" --write",
+		"lint-pkg-json": "npmPkgJsonLint .",
+		"version": "easy-replace-in-files",
+		"eslint": "eslint --quiet .",
+		"eslint:fix": "eslint --quiet --fix .",
+		"prewpdeploy": "pnpm run deploy",
+		"wpdeploy": "wp-deployer",
+		"pot": "composer run-script pot",
 		"vendor": "composer install --no-dev --no-scripts -o",
-    "clean": "rimraf deploy js vendor",
-    "predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
-    "deploy": "packtor"
-  },
-  "wpDeployer": {
-    "repoType": "theme",
-    "username": "rabmalin",
-    "buildDir": "deploy/simple-life",
-    "earlierVersion": "2.5.2",
-    "deployAssets": false
-  },
-  "browserslist": "> 1%, not dead",
-  "devDependencies": {
-    "@wordpress/eslint-plugin": "^12.8.0",
-    "browser-sync": "^2.27.10",
-    "dotenv": "^16.0.1",
-    "easy-replace-in-files": "^1.0.2",
-    "eslint": "^8.21.0",
-    "gulp": "^4.0.2",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "packtor": "^1.0.2",
-    "rimraf": "^6.0.1",
-    "wp-deployer": "^1.0.3"
-  }
+		"clean": "rimraf deploy js vendor",
+		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
+		"deploy": "packtor"
+	}
 }

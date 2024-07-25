@@ -1,0 +1,7 @@
+*.min.*
+composer.json
+deploy
+js
+node_modules
+third-party
+vendor
