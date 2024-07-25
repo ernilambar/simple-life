@@ -2,6 +2,7 @@
 composer.json
 deploy
 js
+scripts
 node_modules
 third-party
 vendor

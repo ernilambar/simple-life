@@ -8,6 +8,7 @@
 		"requireConfigFile": false
 	},
 	"globals": {
+		"ajaxurl": true,
 		"wp": true,
 		"jQuery": true,
 		"simpleLifeScreenReaderText": true
