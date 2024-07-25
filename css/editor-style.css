@@ -4,27 +4,36 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	clear: both;
 }
 p {
 	margin-bottom: 1.5em;
 }
-b, strong {
+b,
+strong {
 	font-weight: bold;
 }
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    font-size: 17.5px;
-    border-left: 5px solid #eee;
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	font-size: 17.5px;
+	border-left: 5px solid #eee;
 }
 p {
 	margin: 0 0 10px;
@@ -42,14 +51,24 @@ pre {
 	overflow: auto;
 	padding: 1.6em;
 }
-code, kbd, tt, var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+code,
+kbd,
+tt,
+var {
+	font:
+		15px Monaco,
+		Consolas,
+		"Andale Mono",
+		"DejaVu Sans Mono",
+		monospace;
 }
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
@@ -65,7 +84,7 @@ sup {
 	bottom: 1ex;
 }
 sub {
-	top: .5ex;
+	top: 0.5ex;
 }
 small {
 	font-size: 75%;
@@ -79,7 +98,8 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
-ul, ol {
+ul,
+ol {
 	margin: 0 0 1.5em 3em;
 }
 ul {
@@ -113,7 +133,7 @@ table {
 th {
 	font-weight: bold;
 }
-code{
+code {
 	white-space: normal !important;
 }
 a,
@@ -138,9 +158,9 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 500;
 }
 h4,
 .h4,
@@ -148,50 +168,50 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 500;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 500;
 }
 h1,
 .h1 {
-  font-size: 36px;
+	font-size: 36px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+	font-size: 30px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+	font-size: 24px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+	font-size: 18px;
 }
 h5,
 .h5 {
-  font-size: 14px;
+	font-size: 14px;
 }
 h6,
 .h6 {
-  font-size: 12px;
+	font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+	margin: 0 0 10px;
 }
 
 table {
-  margin: 5px 0;
-  border-collapse: collapse;
+	margin: 5px 0;
+	border-collapse: collapse;
 }
 
 table td,
 table th {
-  border: 1px #ccc solid;
-  padding: 0.3em;
+	border: 1px #ccc solid;
+	padding: 0.3em;
 }
 
 table thead,
 table th {
-  background-color: #EEEEEE;
+	background-color: #eeeeee;
 }

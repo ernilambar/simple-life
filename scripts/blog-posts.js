@@ -1,11 +1,14 @@
-( function( $ ) {
-	$.fn.blogPosts = function( options ) {
-		var settings = $.extend( {
-			api: '',
-			action: 'blog_posts',
-			loading_text: 'Loading',
-			list_type: 'ul',
-		}, options );
+( function ( $ ) {
+	$.fn.blogPosts = function ( options ) {
+		var settings = $.extend(
+			{
+				api: '',
+				action: 'blog_posts',
+				loading_text: 'Loading',
+				list_type: 'ul',
+			},
+			options
+		);
 
 		if ( '' === settings.api ) {
 			return this;
@@ -18,14 +21,15 @@
 				return output;
 			}
 
-			data.forEach( function( item ) {
-				output += '<li><a href="' + item.url + '" target="_blank">' + item.title + '</a></li>';
+			data.forEach( function ( item ) {
+				output +=
+					'<li><a href="' + item.url + '" target="_blank">' + item.title + '</a></li>';
 			} );
 
 			return $( '<' + settings.list_type + '/>' ).append( output );
 		}
 
-		return this.each( function() {
+		return this.each( function () {
 			var $wrapper = $( this );
 
 			$.ajax( {
@@ -33,10 +37,10 @@
 				type: 'GET',
 				dataType: 'json',
 				data: { action: settings.action },
-				beforeSend: function() {
+				beforeSend: function () {
 					$wrapper.html( settings.loading_text );
 				},
-				complete: function( jqXHR ) {
+				complete: function ( jqXHR ) {
 					var response = JSON.parse( jqXHR.responseText );
 
 					$wrapper.html( '' );
@@ -54,5 +58,4 @@
 		api: ajaxurl,
 		action: 'simple_life_nsbl_get_posts',
 	} );
-}( jQuery ) );
-
+} )( jQuery );
