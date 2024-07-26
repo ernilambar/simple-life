@@ -1,7 +1,8 @@
 {
     "require": {
+        "php": ">=7.2.24",
         "cweagans/composer-patches": "^1.7",
-        "ernilambar/wp-admin-notice": "^1.0",
+        "ernilambar/wp-admin-notice": "^2.0",
         "ernilambar/wp-welcome": "^2.0",
         "justintadlock/hybrid-breadcrumbs": "^1.0",
         "wptt/webfont-loader": "^1.1"

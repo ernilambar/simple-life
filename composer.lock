@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0d5e4600ac07b49b6a8b4cb5099ef44",
+    "content-hash": "8f1fdbaf001a88e6d34d7d90e183f1bc",
     "packages": [
         {
             "name": "cweagans/composer-patches",
@@ -56,20 +56,27 @@
         },
         {
             "name": "ernilambar/wp-admin-notice",
-            "version": "1.0.2",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/wp-admin-notice.git",
-                "reference": "626e4685775bdd06085e7af76f9ae9380c68c9f0"
+                "reference": "ef71e83f6e82d3224783756426ddb209991e30cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/626e4685775bdd06085e7af76f9ae9380c68c9f0",
-                "reference": "626e4685775bdd06085e7af76f9ae9380c68c9f0",
+                "url": "https://api.github.com/repos/ernilambar/wp-admin-notice/zipball/ef71e83f6e82d3224783756426ddb209991e30cb",
+                "reference": "ef71e83f6e82d3224783756426ddb209991e30cb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.2.24"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "php-parallel-lint/php-parallel-lint": "^1.4",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "roave/security-advisories": "dev-latest",
+                "wp-coding-standards/wpcs": "^3.1"
             },
             "type": "library",
             "autoload": {
@@ -97,9 +104,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/wp-admin-notice/issues/",
-                "source": "https://github.com/ernilambar/wp-admin-notice/tree/1.0.2"
+                "source": "https://github.com/ernilambar/wp-admin-notice/tree/2.0.0"
             },
-            "time": "2023-05-29T05:53:39+00:00"
+            "time": "2024-07-26T10:24:55+00:00"
         },
         {
             "name": "ernilambar/wp-welcome",
@@ -2459,7 +2466,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.2.24"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
 }
