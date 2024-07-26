@@ -2,7 +2,8 @@
     "require": {
         "ernilambar/wp-admin-notice": "^1.0",
         "ernilambar/wp-welcome": "^2.0",
-        "justintadlock/hybrid-breadcrumbs": "^1.0"
+        "justintadlock/hybrid-breadcrumbs": "^1.0",
+        "wptt/webfont-loader": "^1.1"
     },
     "require-dev": {
         "php-parallel-lint/php-parallel-lint": "^1.4",

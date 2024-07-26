@@ -13,6 +13,7 @@ if ( ! defined( 'SIMPLE_LIFE_VERSION' ) ) {
 if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
 	require_once get_parent_theme_file_path( 'vendor/ernilambar/wp-welcome/init.php' );
+	require_once get_parent_theme_file_path( 'vendor/wptt/webfont-loader/wptt-webfont-loader.php' );
 }
 
 if ( ! function_exists( 'simple_life_setup' ) ) :
@@ -206,11 +207,6 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * WebFont Loader.
- */
-require get_template_directory() . '/inc/wptt-webfont-loader.php';
 
 /**
  * Load welcome.

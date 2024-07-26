@@ -22,26 +22,29 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 				if ( function_exists( 'wp_pagenavi' ) ) {
 					wp_pagenavi();
 				} else {
-					the_posts_pagination( array(
-						'mid_size'           => 2,
-						'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Previous page', 'simple-life' ),
-						'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
-						'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'simple-life' ) . ' </span>',
-					) );
+					the_posts_pagination(
+						array(
+							'mid_size'           => 2,
+							'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Previous page', 'simple-life' ),
+							'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
+							'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'simple-life' ) . ' </span>',
+						)
+					);
 				}
 				break;
 
 			case 'default':
-				the_posts_navigation( array(
-					'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Older posts', 'simple-life' ),
-					'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
-					) );
+				the_posts_navigation(
+					array(
+						'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Older posts', 'simple-life' ),
+						'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
+					)
+				);
 				break;
 
 			default:
 				break;
 		}
-
 	}
 endif;
 
@@ -55,7 +58,8 @@ if ( ! function_exists( 'simple_life_posted_on' ) ) :
 			$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
@@ -72,8 +76,7 @@ if ( ! function_exists( 'simple_life_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 endif;
 
@@ -83,14 +86,18 @@ endif;
  * @return bool
  */
 function simple_life_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'simple_life_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'simple_life_categories' );
+
+	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
+		$all_the_cool_cats = get_categories(
+			array(
+				'fields'     => 'ids',
+				'hide_empty' => 1,
+				// We only need to know if there is more than one category.
+				'number'     => 2,
+			)
+		);
 
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
@@ -115,7 +122,7 @@ function simple_life_category_transient_flusher() {
 	delete_transient( 'simple_life_categories' );
 }
 add_action( 'edit_category', 'simple_life_category_transient_flusher' );
-add_action( 'save_post',     'simple_life_category_transient_flusher' );
+add_action( 'save_post', 'simple_life_category_transient_flusher' );
 
 
 if ( ! function_exists( 'simple_life_post_format_icon' ) ) :
@@ -154,12 +161,12 @@ if ( ! function_exists( 'simple_life_post_format_icon' ) ) :
 					break;
 			}
 
-		?>
+			?>
 			<span class="fa-stack fa-lg">
-			  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
-			  <i class="fa fa-<?php echo esc_attr( $format_icon ); ?> fa-stack-1x fa-inverse" aria-hidden="true"></i>
+				<i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+				<i class="fa fa-<?php echo esc_attr( $format_icon ); ?> fa-stack-1x fa-inverse" aria-hidden="true"></i>
 			</span>
-		<?php
+			<?php
 		} // End if.
 	}
 
@@ -175,8 +182,7 @@ if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
 	function simple_life_the_custom_logo() {
 		if ( function_exists( 'the_custom_logo' ) ) {
 			the_custom_logo();
-		}
-		else {
+		} else {
 			$site_logo = simple_life_get_option( 'site_logo' );
 			if ( ! empty( $site_logo ) ) {
 				?>
@@ -186,7 +192,6 @@ if ( ! function_exists( 'simple_life_the_custom_logo' ) ) :
 				<?php
 			}
 		}
-
 	}
 
 endif;
