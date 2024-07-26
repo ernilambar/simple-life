@@ -19,10 +19,10 @@ if ( ! function_exists( 'simple_life_custom_content_classes' ) ) :
 		if ( is_page_template( 'template/content-sidebar.php' ) ) {
 			$input[] = 'col-sm-8';
 			$input[] = 'pull-left';
-		} else if ( is_page_template( 'template/sidebar-content.php' ) ) {
+		} elseif ( is_page_template( 'template/sidebar-content.php' ) ) {
 			$input[] = 'col-sm-8';
 			$input[] = 'pull-right';
-		} else if ( is_page_template( 'template/full-width.php' ) ) {
+		} elseif ( is_page_template( 'template/full-width.php' ) ) {
 			$input[] = 'col-sm-12';
 		} else {
 			$site_layout = simple_life_get_option( 'site_layout' );
@@ -30,10 +30,10 @@ if ( ! function_exists( 'simple_life_custom_content_classes' ) ) :
 			if ( 'content-sidebar' === $site_layout ) {
 				$input[] = 'col-sm-8';
 				$input[] = 'pull-left';
-			} else if ( 'sidebar-content' === $site_layout ) {
+			} elseif ( 'sidebar-content' === $site_layout ) {
 				$input[] = 'col-sm-8';
 				$input[] = 'pull-right';
-			} else if ( 'full-width' === $site_layout ) {
+			} elseif ( 'full-width' === $site_layout ) {
 				$input[] = 'col-sm-12';
 			}
 		}
@@ -60,9 +60,9 @@ if ( ! function_exists( 'simple_life_custom_sidebar_classes' ) ) :
 
 		if ( is_page_template( 'template/content-sidebar.php' ) ) {
 			$input[] = 'col-sm-4';
-		} else if ( is_page_template( 'template/sidebar-content.php' ) ) {
+		} elseif ( is_page_template( 'template/sidebar-content.php' ) ) {
 			$input[] = 'col-sm-4';
-		} else if ( is_page_template( 'template/full-width.php' ) ) {
+		} elseif ( is_page_template( 'template/full-width.php' ) ) {
 			$input[] = 'hidden';
 		} else {
 
@@ -70,9 +70,9 @@ if ( ! function_exists( 'simple_life_custom_sidebar_classes' ) ) :
 
 			if ( 'content-sidebar' === $site_layout ) {
 				$input[] = 'col-sm-4';
-			} else if ( 'sidebar-content' === $site_layout ) {
+			} elseif ( 'sidebar-content' === $site_layout ) {
 				$input[] = 'col-sm-4';
-			} else if ( 'full-width' === $site_layout ) {
+			} elseif ( 'full-width' === $site_layout ) {
 				$input[] = 'hidden';
 			}
 		}
@@ -98,14 +98,13 @@ if ( ! function_exists( 'simple_life_custom_post_classes' ) ) :
 			$content_layout = simple_life_get_option( 'content_layout' );
 			if ( 'full' === $content_layout ) {
 				$input[] = 'content-layout-full';
-			} else if ( 'excerpt' === $content_layout ) {
+			} elseif ( 'excerpt' === $content_layout ) {
 				$input[] = 'content-layout-excerpt';
-			} else if ( 'excerpt-thumb' === $content_layout ) {
+			} elseif ( 'excerpt-thumb' === $content_layout ) {
 				$input[] = 'content-layout-excerpt-thumb';
 			}
 		}
 		return $input;
-
 	}
 endif;
 
@@ -155,8 +154,8 @@ if ( ! function_exists( 'simple_life_excerpt_readmore' ) ) :
 		if ( empty( $read_more_text ) ) {
 			return $more;
 		}
-		$output = '... <a href="'. esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text )  . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span><span class="fa fa-angle-double-right" aria-hidden="true"></span></a>';
-		$output = apply_filters( 'simple_life_filter_read_more_content' , $output );
+		$output = '... <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="readmore">' . esc_attr( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span><span class="fa fa-angle-double-right" aria-hidden="true"></span></a>';
+		$output = apply_filters( 'simple_life_filter_read_more_content', $output );
 		return $output;
 	}
 endif;
@@ -174,8 +173,7 @@ if ( ! function_exists( 'simple_life_add_go_to_top' ) ) :
 		if ( true !== $go_to_top ) {
 			return;
 		}
-		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse" aria-hidden="true"></i></span><span class="screen-reader-text">' . __( 'Go to top', 'simple-life' ) . '</span></a>';
-
+		echo '<a href="#" class="scrollup" id="btn-scrollup"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse" aria-hidden="true"></i></span><span class="screen-reader-text">' . esc_html__( 'Go to top', 'simple-life' ) . '</span></a>';
 	}
 endif;
 add_action( 'wp_footer', 'simple_life_add_go_to_top' );
@@ -209,32 +207,31 @@ add_filter( 'template_redirect', 'simple_life_custom_content_width' );
  */
 function simple_life_import_logo_field() {
 
-    // Bail if Custom Logo feature is not available.
-    if ( ! function_exists( 'the_custom_logo' ) ) {
-        return;
-    }
+	// Bail if Custom Logo feature is not available.
+	if ( ! function_exists( 'the_custom_logo' ) ) {
+		return;
+	}
 
-    // Fetch old logo URL.
-    $site_logo = simple_life_get_option( 'site_logo' );
+	// Fetch old logo URL.
+	$site_logo = simple_life_get_option( 'site_logo' );
 
-    // Bail if there is no existing logo.
-    if ( empty( $site_logo ) ) {
-        return;
-    }
+	// Bail if there is no existing logo.
+	if ( empty( $site_logo ) ) {
+		return;
+	}
 
-    // Get attachment ID.
-    $attachment_id = attachment_url_to_postid( $site_logo );
+	// Get attachment ID.
+	$attachment_id = attachment_url_to_postid( $site_logo );
 
-    if ( $attachment_id > 0 ) {
-        // We got valid attachment ID.
-        set_theme_mod( 'custom_logo', $attachment_id );
-        // Remove old logo value.
-        $all_options = simple_life_get_options();
-        $all_options['site_logo'] = '';
-        set_theme_mod( 'simple_life_options', $all_options );
+	if ( $attachment_id > 0 ) {
+		// We got valid attachment ID.
+		set_theme_mod( 'custom_logo', $attachment_id );
+		// Remove old logo value.
+		$all_options              = simple_life_get_options();
+		$all_options['site_logo'] = '';
+		set_theme_mod( 'simple_life_options', $all_options );
 
-    }
-
+	}
 }
 add_action( 'after_setup_theme', 'simple_life_import_logo_field', 20 );
 
@@ -271,7 +268,6 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 		\Hybrid\Breadcrumbs\Trail::display( $breadcrumb_args );
 
 		echo '</div><!-- .col-sm-12 --></div></div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
-
 	}
 
 endif;

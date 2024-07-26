@@ -25,6 +25,7 @@
 			"!*.json",
 			"!*.lock",
 			"!*.yaml",
+			"!patches/**/*",
 			"!sass/**/*",
 			"!scripts/**/*",
 			"!src/**/*"

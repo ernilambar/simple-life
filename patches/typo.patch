@@ -1,0 +1,13 @@
+diff --git a/src/Query/Week.php b/src/Query/Week.php
+index 04d1384..c9f4386 100644
+--- a/src/Query/Week.php
++++ b/src/Query/Week.php
+@@ -19,7 +19,7 @@ namespace Hybrid\Breadcrumbs\Query;
+  * @since  1.0.0
+  * @access public
+  */
+-class WeekArchive extends Base {
++class Week extends Base {
+
+ 	/**
+ 	 * Builds the breadcrumbs.
