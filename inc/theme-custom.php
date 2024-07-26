@@ -1,9 +1,12 @@
 <?php
 /**
- * Simple Life custom functions.
+ * Custom functions
  *
  * @package Simple_Life
  */
+
+use Hybrid\Breadcrumbs\Trail;
+use Nilambar\AdminNotice\Notice;
 
 if ( ! function_exists( 'simple_life_custom_content_classes' ) ) :
 	/**
@@ -265,7 +268,7 @@ if ( ! function_exists( 'simple_life_add_breadcrumb' ) ) :
 			),
 		);
 
-		\Hybrid\Breadcrumbs\Trail::display( $breadcrumb_args );
+		Trail::display( $breadcrumb_args );
 
 		echo '</div><!-- .col-sm-12 --></div></div><!-- .row --></div><!-- .container --></div><!-- #breadcrumb -->';
 	}
@@ -282,7 +285,7 @@ add_action( 'simple_life_action_after_header', 'simple_life_add_breadcrumb' );
  */
 function simple_life_add_admin_notice() {
 	// Setup notice.
-	\Nilambar\AdminNotice\Notice::init(
+	Notice::init(
 		array(
 			'slug' => 'simple-life',
 			'type' => 'theme',
