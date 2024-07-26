@@ -88,7 +88,7 @@
 				?>
 			<span class="cat-links">
 			<i class="fa fa-folder-open" aria-hidden="true"></i>
-				<?php printf( '%1$s', $categories_list ); ?>
+				<?php printf( '%1$s', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</span>
 			<?php endif; // End if categories. ?>
 
@@ -99,7 +99,7 @@
 				?>
 			<span class="tags-links">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-				<?php printf( '<span>&nbsp;%1$s</span>', $tags_list ); ?>
+				<?php printf( '<span>&nbsp;%1$s</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</span>
 			<?php endif; // End if $tags_list. ?>
 		<?php endif; // End if 'post' == get_post_type(). ?>

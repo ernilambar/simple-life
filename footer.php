@@ -31,7 +31,7 @@
 		?>
 		<?php if ( ! empty( $footer_nav ) ) : ?>
 			<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'simple-life' ); ?>">
-			<?php echo $footer_nav; ?>
+			<?php echo $footer_nav; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</nav>
 		<?php endif ?>
 

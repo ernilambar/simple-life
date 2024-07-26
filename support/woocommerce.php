@@ -55,6 +55,9 @@ add_action( 'wp', 'simple_life_hooking_woo' );
 
 /**
  * WooCommerce Breadcrumb defaults.
+ *
+ * @param array $args Breadcrumb arguments.
+ * @return array Customized arguments.
  */
 function simple_life_woo_breadcrumbs_defaults( $args ) {
 	$args['wrap_before'] = '<div id="breadcrumb" itemprop="breadcrumb"><div class="container"><div class="row"><div class="col-sm-12">';

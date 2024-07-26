@@ -443,8 +443,10 @@ if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
 	 * @return mixed Sanitized value.
 	 */
 	function simple_life_sanitize_select( $input, $setting ) {
-		$input   = sanitize_key( $input );
+		$input = sanitize_text_field( $input );
+
 		$choices = $setting->manager->get_control( $setting->id )->choices;
+
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 }
@@ -453,6 +455,8 @@ if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
  * Customizer partials.
  *
  * @since 1.0.0
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 

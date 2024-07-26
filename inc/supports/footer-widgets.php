@@ -12,10 +12,25 @@
  */
 class Simple_Life_Footer_Widgets {
 
+	/**
+	 * Maximum widgets.
+	 *
+	 * @var int
+	 */
 	protected $max_widgets = 0;
 
+	/**
+	 * Active widgets.
+	 *
+	 * @var int
+	 */
 	protected $active_widgets = 0;
 
+	/**
+	 * Theme prefix.
+	 *
+	 * @var string
+	 */
 	protected $theme_prefix = 'simple_life';
 
 	/**
@@ -24,7 +39,6 @@ class Simple_Life_Footer_Widgets {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-
 		$this->setup();
 		$this->init();
 	}
@@ -117,6 +131,9 @@ class Simple_Life_Footer_Widgets {
 	 * Add custom class in widgets.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param string $input CSS class.
+	 * @return string Custom CSS class.
 	 */
 	public function custom_footer_widget_class( $input ) {
 		$footer_widgets_number = $this->active_widgets;
@@ -194,6 +211,9 @@ class Simple_Life_Footer_Widgets {
 	 * Returns footer widget contents.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param array $args Arguments.
+	 * @return string Widget content.
 	 */
 	public function get_footer_widgets_content( $args ) {
 		$number = $this->active_widgets;

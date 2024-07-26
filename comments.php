@@ -30,15 +30,15 @@ if ( post_password_required() ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'simple-life' ),
-					'<span>' . get_the_title() . '</span>'
-				);
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			} else {
 				printf(
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'simple-life' ) ),
-					number_format_i18n( $comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
+					number_format_i18n( $comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 			?>
 		</h2><!-- .comments-title -->

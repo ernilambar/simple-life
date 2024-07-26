@@ -32,9 +32,9 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	 *
 	 * @since 1.2
 	 *
-	 * @param bool $add_disable Add disable option or not.
+	 * @param bool  $add_disable Add disable option or not.
 	 * @param array $allowed Allowed array.
-	 * @param bool $show_dimension Show or hide dimension.
+	 * @param bool  $show_dimension Show or hide dimension.
 	 */
 	function simple_life_get_image_sizes_options( $add_disable = true, $allowed = array(), $show_dimension = true ) {
 
