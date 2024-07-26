@@ -17,19 +17,21 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
- 		<?php if ( has_post_thumbnail() ) : ?>
- 			<div class="post-thumbnail-wrapper">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post-thumbnail-wrapper">
 				<?php the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) ); ?>
- 			</div>
- 		<?php endif; ?>
+			</div>
+		<?php endif; ?>
 
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simple-life' ),
-				'after'  => '</div>',
-			) );
-		?>
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simple-life' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
@@ -40,13 +42,13 @@
 			/* translators: used between list items, there is a space after the comma. */
 			$tag_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 
-			if ( ! empty( $category_list ) ) {
-				echo '<span class="sl-category"><i class="fa fa-folder-open" aria-hidden="true"></i> ' . $category_list . '</span>';
-			}
-			if ( ! empty( $tag_list ) ) {
-				echo '<span class="sl-tags"><i class="fa fa-tags" aria-hidden="true"></i> ' . $tag_list . '</span>';
-			}
+		if ( ! empty( $category_list ) ) {
+			echo '<span class="sl-category"><i class="fa fa-folder-open" aria-hidden="true"></i> ' . $category_list . '</span>';
+		}
 
+		if ( ! empty( $tag_list ) ) {
+			echo '<span class="sl-tags"><i class="fa fa-tags" aria-hidden="true"></i> ' . $tag_list . '</span>';
+		}
 		?>
 
 		<?php edit_post_link( esc_html__( 'Edit', 'simple-life' ), '<span class="edit-link pull-right"><i class="fa fa-edit" aria-hidden="true"></i>', '</span>' ); ?>

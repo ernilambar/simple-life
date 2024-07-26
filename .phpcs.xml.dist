@@ -9,7 +9,7 @@
 	<ini name="error_reporting" value="E_ALL &#38; ~E_DEPRECATED" />
 
 	<!-- What to scan -->
-	<file>./inc</file>
+	<file>.</file>
 
 	<!-- Exclude files and folders -->
 	<exclude-pattern>*/build/*</exclude-pattern>
