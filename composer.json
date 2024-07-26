@@ -26,7 +26,8 @@
 						"phpcs"
         ],
         "lint-php": "@php ./vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
-        "phpcs": "@php ./vendor/bin/phpcs --report-full --report-summary .",
+				"phpcbf": "@php ./vendor/bin/phpcbf --report-full --report-summary",
+        "phpcs": "@php ./vendor/bin/phpcs --report-full --report-summary",
         "pot": "./vendor/bin/wp i18n make-pot . --exclude=build,deploy,node_modules,vendor --headers='{\"POT-Creation-Date\":\"\"}'"
     }
 }
