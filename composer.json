@@ -35,7 +35,7 @@
     "scripts": {
         "lint": [
             "@lint-php",
-            "phpcs"
+            "@phpcs"
         ],
         "lint-php": "@php ./vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
         "phpcbf": "@php ./vendor/bin/phpcbf --report-full --report-summary",
