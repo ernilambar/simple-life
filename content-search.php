@@ -28,7 +28,7 @@
 		<?php if ( 'post' === get_post_type() ) : // Hide category and tag text for pages on Search. ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma. */
-				$categories_list = get_the_category_list( __( ', ', 'simple-life' ) );
+				$categories_list = get_the_category_list( esc_html__( ', ', 'simple-life' ) );
 			if ( $categories_list && simple_life_categorized_blog() ) :
 				?>
 			<span class="cat-links">
@@ -39,7 +39,7 @@
 
 			<?php
 				/* translators: used between list items, there is a space after the comma. */
-				$tags_list = get_the_tag_list( '', __( ', ', 'simple-life' ) );
+				$tags_list = get_the_tag_list( '', esc_html__( ', ', 'simple-life' ) );
 			if ( $tags_list ) :
 				?>
 			<span class="tags-links">

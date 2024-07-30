@@ -25,9 +25,9 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 					the_posts_pagination(
 						array(
 							'mid_size'           => 2,
-							'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Previous page', 'simple-life' ),
-							'next_text'          => __( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
-							'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'simple-life' ) . ' </span>',
+							'prev_text'          => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . esc_html__( 'Previous page', 'simple-life' ),
+							'next_text'          => esc_html__( 'Next page', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
+							'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'simple-life' ) . ' </span>',
 						)
 					);
 				}
@@ -36,8 +36,8 @@ if ( ! function_exists( 'simple_life_paging_nav' ) ) :
 			case 'default':
 				the_posts_navigation(
 					array(
-						'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . __( 'Older posts', 'simple-life' ),
-						'next_text' => __( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
+						'prev_text' => '<span class="meta-nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> ' . esc_html__( 'Older posts', 'simple-life' ),
+						'next_text' => esc_html__( 'Newer posts', 'simple-life' ) . ' <span class="meta-nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
 					)
 				);
 				break;

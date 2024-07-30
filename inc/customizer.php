@@ -38,7 +38,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'simple_life_options_panel',
 		array(
-			'title'      => __( 'Simple Life Options', 'simple-life' ),
+			'title'      => esc_html__( 'Simple Life Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 		)
@@ -48,7 +48,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'simple_life_options_general',
 		array(
-			'title'      => __( 'General Options', 'simple-life' ),
+			'title'      => esc_html__( 'General Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 			'panel'      => 'simple_life_options_panel',
@@ -67,14 +67,14 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[site_layout]',
 		array(
-			'label'    => __( 'Site Layout', 'simple-life' ),
+			'label'    => esc_html__( 'Site Layout', 'simple-life' ),
 			'section'  => 'simple_life_options_general',
 			'type'     => 'select',
 			'priority' => 105,
 			'choices'  => array(
-				'content-sidebar' => __( 'Content-Sidebar', 'simple-life' ),
-				'sidebar-content' => __( 'Sidebar-Content', 'simple-life' ),
-				'full-width'      => __( 'Full Width', 'simple-life' ),
+				'content-sidebar' => esc_html__( 'Content-Sidebar', 'simple-life' ),
+				'sidebar-content' => esc_html__( 'Sidebar-Content', 'simple-life' ),
+				'full-width'      => esc_html__( 'Full Width', 'simple-life' ),
 			),
 		)
 	);
@@ -91,14 +91,14 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[content_layout]',
 		array(
-			'label'    => __( 'Content Layout', 'simple-life' ),
+			'label'    => esc_html__( 'Content Layout', 'simple-life' ),
 			'section'  => 'simple_life_options_general',
 			'type'     => 'select',
 			'priority' => 115,
 			'choices'  => array(
-				'full'          => __( 'Full Post (with image)', 'simple-life' ),
-				'excerpt'       => __( 'Excerpt Only', 'simple-life' ),
-				'excerpt-thumb' => __( 'Excerpt with thumbnail', 'simple-life' ),
+				'full'          => esc_html__( 'Full Post (with image)', 'simple-life' ),
+				'excerpt'       => esc_html__( 'Excerpt Only', 'simple-life' ),
+				'excerpt-thumb' => esc_html__( 'Excerpt with thumbnail', 'simple-life' ),
 			),
 		)
 	);
@@ -115,7 +115,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[archive_image_thumbnail_size]',
 		array(
-			'label'           => __( 'Archive Image Size', 'simple-life' ),
+			'label'           => esc_html__( 'Archive Image Size', 'simple-life' ),
 			'section'         => 'simple_life_options_general',
 			'type'            => 'select',
 			'priority'        => 120,
@@ -136,7 +136,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[archive_image_alignment]',
 		array(
-			'label'           => __( 'Archive Image Alignment', 'simple-life' ),
+			'label'           => esc_html__( 'Archive Image Alignment', 'simple-life' ),
 			'section'         => 'simple_life_options_general',
 			'type'            => 'select',
 			'priority'        => 125,
@@ -157,7 +157,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[enable_breadcrumb]',
 		array(
-			'label'    => __( 'Enable Breadcrumb', 'simple-life' ),
+			'label'    => esc_html__( 'Enable Breadcrumb', 'simple-life' ),
 			'section'  => 'simple_life_options_general',
 			'type'     => 'checkbox',
 			'priority' => 130,
@@ -168,7 +168,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'simple_life_options_blog',
 		array(
-			'title'      => __( 'Blog Options', 'simple-life' ),
+			'title'      => esc_html__( 'Blog Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 			'panel'      => 'simple_life_options_panel',
@@ -188,7 +188,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[read_more_text]',
 		array(
-			'label'    => __( 'Read more text', 'simple-life' ),
+			'label'    => esc_html__( 'Read more text', 'simple-life' ),
 			'section'  => 'simple_life_options_blog',
 			'type'     => 'text',
 			'priority' => 210,
@@ -208,7 +208,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[excerpt_length]',
 		array(
-			'label'    => __( 'Excerpt Length', 'simple-life' ),
+			'label'    => esc_html__( 'Excerpt Length', 'simple-life' ),
 			'section'  => 'simple_life_options_blog',
 			'type'     => 'text',
 			'priority' => 220,
@@ -219,7 +219,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'simple_life_options_search',
 		array(
-			'title'      => __( 'Search Options', 'simple-life' ),
+			'title'      => esc_html__( 'Search Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 			'panel'      => 'simple_life_options_panel',
@@ -238,7 +238,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[search_placeholder]',
 		array(
-			'label'    => __( 'Search Placeholder', 'simple-life' ),
+			'label'    => esc_html__( 'Search Placeholder', 'simple-life' ),
 			'section'  => 'simple_life_options_search',
 			'type'     => 'text',
 			'priority' => 220,
@@ -249,7 +249,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'simple_life_options_pagination',
 		array(
-			'title'      => __( 'Pagination Options', 'simple-life' ),
+			'title'      => esc_html__( 'Pagination Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 			'panel'      => 'simple_life_options_panel',
@@ -267,13 +267,13 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[pagination_type]',
 		array(
-			'label'    => __( 'Pagination Type', 'simple-life' ),
+			'label'    => esc_html__( 'Pagination Type', 'simple-life' ),
 			'section'  => 'simple_life_options_pagination',
 			'type'     => 'select',
 			'priority' => 220,
 			'choices'  => array(
-				'default' => __( 'Default', 'simple-life' ),
-				'numeric' => __( 'Numeric', 'simple-life' ),
+				'default' => esc_html__( 'Default', 'simple-life' ),
+				'numeric' => esc_html__( 'Numeric', 'simple-life' ),
 			),
 		)
 	);
@@ -282,7 +282,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'simple_life_options_footer',
 		array(
-			'title'      => __( 'Footer Options', 'simple-life' ),
+			'title'      => esc_html__( 'Footer Options', 'simple-life' ),
 			'priority'   => 100,
 			'capability' => 'edit_theme_options',
 			'panel'      => 'simple_life_options_panel',
@@ -302,7 +302,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[copyright_text]',
 		array(
-			'label'    => __( 'Copyright text', 'simple-life' ),
+			'label'    => esc_html__( 'Copyright text', 'simple-life' ),
 			'section'  => 'simple_life_options_footer',
 			'type'     => 'text',
 			'priority' => 910,
@@ -321,7 +321,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[powered_by]',
 		array(
-			'label'    => __( 'Show Powered By', 'simple-life' ),
+			'label'    => esc_html__( 'Show Powered By', 'simple-life' ),
 			'section'  => 'simple_life_options_footer',
 			'type'     => 'checkbox',
 			'priority' => 920,
@@ -340,7 +340,7 @@ function simple_life_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'simple_life_options[go_to_top]',
 		array(
-			'label'    => __( 'Enable Go To Top', 'simple-life' ),
+			'label'    => esc_html__( 'Enable Go To Top', 'simple-life' ),
 			'section'  => 'simple_life_options_footer',
 			'type'     => 'checkbox',
 			'priority' => 920,

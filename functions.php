@@ -71,8 +71,8 @@ if ( ! function_exists( 'simple_life_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'simple-life' ),
-				'footer'  => __( 'Footer Menu', 'simple-life' ),
+				'primary' => esc_html__( 'Primary Menu', 'simple-life' ),
+				'footer'  => esc_html__( 'Footer Menu', 'simple-life' ),
 			)
 		);
 
@@ -145,9 +145,9 @@ add_action( 'after_setup_theme', 'simple_life_setup' );
 function simple_life_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'simple-life' ),
+			'name'          => esc_html__( 'Sidebar', 'simple-life' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'simple-life' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'simple-life' ),
 			'before_widget' => '<aside id="%1$s" class="widget clearfix %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
