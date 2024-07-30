@@ -97,7 +97,7 @@ class Simple_Life_Footer_Widgets {
 			register_sidebar(
 				array(
 					/* translators: %s: Column. */
-					'name'          => sprintf( __( 'Footer Column %d', 'simple-life' ), $i ),
+					'name'          => sprintf( esc_html__( 'Footer Column %d', 'simple-life' ), $i ),
 					'id'            => $wid,
 					'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</aside>',
