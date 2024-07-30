@@ -12,7 +12,7 @@ if ( ! function_exists( 'simple_life_get_option' ) ) :
 	 *
 	 * @param string $key           Option key.
 	 * @param mixed  $default_value Default value.
-	 * @return mixed
+	 * @return mixed Value.
 	 */
 	function simple_life_get_option( $key, $default_value = '' ) {
 		global $simple_life_default_options;
@@ -29,7 +29,7 @@ if ( ! function_exists( 'simple_life_get_option' ) ) :
 
 		$value = '';
 
-		if ( isset( $theme_options[ $key ] ) ) {
+		if ( array_key_exists( $key, $theme_options ) ) {
 			$value = $theme_options[ $key ];
 		}
 
@@ -46,7 +46,6 @@ if ( ! function_exists( 'simple_life_get_theme_option_defaults' ) ) :
 	 */
 	function simple_life_get_theme_option_defaults() {
 		$defaults = array(
-			'replace_site_title'           => false,
 			'site_layout'                  => 'content-sidebar',
 			'content_layout'               => 'excerpt-thumb',
 			'archive_image_thumbnail_size' => 'large',
