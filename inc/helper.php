@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme helper functions
+ * Helper functions
  *
  * @package Simple_Life
  */
@@ -10,7 +10,7 @@ if ( ! function_exists( 'simple_life_get_image_alignment_options' ) ) :
 	/**
 	 * Returns image alignment options.
 	 *
-	 * @since Simple Life 2.0
+	 * @since 2.0
 	 */
 	function simple_life_get_image_alignment_options() {
 
@@ -79,51 +79,3 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	}
 
 endif;
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @since 2.0
- *
- * @return void
- */
-function simple_life_customize_partial_blogname() {
-
-	bloginfo( 'name' );
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @since 2.0
- *
- * @return void
- */
-function simple_life_customize_partial_blogdescription() {
-
-	bloginfo( 'description' );
-}
-
-/**
- * Render the copyright text for the selective refresh partial.
- *
- * @since 2.0
- *
- * @return void
- */
-function simple_life_customize_partial_copyright_text() {
-
-	echo wp_kses_post( simple_life_get_option( 'copyright_text' ) );
-}
-
-/**
- * Render the read more text for the selective refresh partial.
- *
- * @since 2.0
- *
- * @return void
- */
-function simple_life_customize_partial_read_more_text() {
-
-	echo esc_html( simple_life_get_option( 'read_more_text' ) );
-}
