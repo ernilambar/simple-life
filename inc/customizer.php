@@ -13,10 +13,26 @@
 function simple_life_customize_register( $wp_customize ) {
 	global $simple_life_default_options;
 
-	// Panels, sections and fields.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->selective_refresh->add_partial(
+		'blogname',
+		array(
+			'selector'            => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback'     => function () {
+				bloginfo( 'name' );
+			},
+		)
+	);
+	$wp_customize->selective_refresh->add_partial(
+		'blogdescription',
+		array(
+			'selector'            => '.site-description',
+			'container_inclusive' => false,
+			'render_callback'     => function () {
+				bloginfo( 'description' );
+			},
+		)
+	);
 
 	// Add Panel.
 	$wp_customize->add_panel(
@@ -333,17 +349,6 @@ function simple_life_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'simple_life_customize_register' );
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function simple_life_customize_preview_js() {
-
-	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-
-	wp_enqueue_script( 'simple-life-customizer', get_template_directory_uri() . '/js/customizer' . $min . '.js', array( 'customize-preview' ), '2.0.0', true );
-}
-add_action( 'customize_preview_init', 'simple_life_customize_preview_js' );
-
 if ( ! function_exists( 'simple_life_is_non_excerpt_content_layout_active' ) ) :
 
 	/**
@@ -425,26 +430,6 @@ if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
  */
 function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial(
-		'blogname',
-		array(
-			'selector'            => '.site-title a',
-			'container_inclusive' => false,
-			'render_callback'     => function () {
-				bloginfo( 'name' );
-			},
-		)
-	);
-	$wp_customize->selective_refresh->add_partial(
-		'blogdescription',
-		array(
-			'selector'            => '.site-description',
-			'container_inclusive' => false,
-			'render_callback'     => function () {
-				bloginfo( 'description' );
-			},
-		)
-	);
-	$wp_customize->selective_refresh->add_partial(
 		'copyright-text',
 		array(
 			'selector'            => '.copyright-text',
@@ -455,6 +440,7 @@ function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 			},
 		)
 	);
+
 	$wp_customize->selective_refresh->add_partial(
 		'read-more-text',
 		array(
