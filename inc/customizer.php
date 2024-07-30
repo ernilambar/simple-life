@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple Life Theme Customizer
+ * Theme Customizer
  *
  * @package Simple_Life
  */
@@ -11,7 +11,6 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function simple_life_customize_register( $wp_customize ) {
-
 	global $simple_life_default_options;
 
 	// Panels, sections and fields.
@@ -459,19 +458,14 @@ if ( ! function_exists( 'simple_life_sanitize_select' ) ) {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
-
-	if ( ! isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->get_setting( 'simple_life_options[copyright_text]' )->transport = 'refresh';
-		$wp_customize->get_setting( 'simple_life_options[read_more_text]' )->transport = 'refresh';
-		return;
-	}
-
 	$wp_customize->selective_refresh->add_partial(
 		'blogname',
 		array(
 			'selector'            => '.site-title a',
 			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_blogname',
+			'render_callback'     => function () {
+				bloginfo( 'name' );
+			},
 		)
 	);
 	$wp_customize->selective_refresh->add_partial(
@@ -479,7 +473,9 @@ function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 		array(
 			'selector'            => '.site-description',
 			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_blogdescription',
+			'render_callback'     => function () {
+				bloginfo( 'description' );
+			},
 		)
 	);
 	$wp_customize->selective_refresh->add_partial(
@@ -488,7 +484,9 @@ function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 			'selector'            => '.copyright-text',
 			'settings'            => array( 'simple_life_options[copyright_text]' ),
 			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_copyright_text',
+			'render_callback'     => function () {
+				echo wp_kses_post( simple_life_get_option( 'copyright_text' ) );
+			},
 		)
 	);
 	$wp_customize->selective_refresh->add_partial(
@@ -497,7 +495,9 @@ function simple_life_customizer_partials( WP_Customize_Manager $wp_customize ) {
 			'selector'            => 'a.readmore',
 			'settings'            => array( 'simple_life_options[read_more_text]' ),
 			'container_inclusive' => false,
-			'render_callback'     => 'simple_life_customize_partial_read_more_text',
+			'render_callback'     => function () {
+				echo esc_html( simple_life_get_option( 'read_more_text' ) );
+			},
 		)
 	);
 }
