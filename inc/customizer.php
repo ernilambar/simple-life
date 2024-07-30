@@ -28,40 +28,6 @@ function simple_life_customize_register( $wp_customize ) {
 		)
 	);
 
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		// Logo Section.
-		$wp_customize->add_section(
-			'simple_life_options_logo',
-			array(
-				'title'      => __( 'Logo Options', 'simple-life' ),
-				'priority'   => 100,
-				'capability' => 'edit_theme_options',
-				'panel'      => 'simple_life_options_panel',
-			)
-		);
-		// Setting - site_logo.
-		$wp_customize->add_setting(
-			'simple_life_options[site_logo]',
-			array(
-				'default'           => $simple_life_default_options['site_logo'],
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'simple_life_options[site_logo]',
-				array(
-					'label'    => __( 'Logo', 'simple-life' ),
-					'section'  => 'simple_life_options_logo',
-					'settings' => 'simple_life_options[site_logo]',
-				)
-			)
-		);
-
-	} // End if function_exists - the_custom_logo.
-
 	// General Section.
 	$wp_customize->add_section(
 		'simple_life_options_general',
