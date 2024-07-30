@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme helper functions.
+ * Theme helper functions
  *
  * @package Simple_Life
  */
@@ -32,18 +32,21 @@ if ( ! function_exists( 'simple_life_get_image_sizes_options' ) ) :
 	 *
 	 * @since 1.2
 	 *
-	 * @param bool  $add_disable Add disable option or not.
-	 * @param array $allowed Allowed array.
+	 * @param bool  $add_disable    Add disable option or not.
+	 * @param array $allowed        Allowed array.
 	 * @param bool  $show_dimension Show or hide dimension.
 	 */
 	function simple_life_get_image_sizes_options( $add_disable = true, $allowed = array(), $show_dimension = true ) {
-
 		global $_wp_additional_image_sizes;
+
 		$get_intermediate_image_sizes = get_intermediate_image_sizes();
-		$choices                      = array();
+
+		$choices = array();
+
 		if ( true === $add_disable ) {
 			$choices['disable'] = esc_html__( 'No Image', 'simple-life' );
 		}
+
 		$choices['thumbnail'] = esc_html__( 'Thumbnail', 'simple-life' );
 		$choices['medium']    = esc_html__( 'Medium', 'simple-life' );
 		$choices['large']     = esc_html__( 'Large', 'simple-life' );

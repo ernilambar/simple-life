@@ -161,7 +161,6 @@ add_action( 'widgets_init', 'simple_life_widgets_init' );
  * Enqueue scripts and styles.
  */
 function simple_life_scripts() {
-
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_style( 'simple-life-style-open-sans', wptt_get_webfont_url( 'https://fonts.googleapis.com/css?family=Open+Sans' ), array(), SIMPLE_LIFE_VERSION );
@@ -175,6 +174,7 @@ function simple_life_scripts() {
 
 	wp_enqueue_script( 'simple-life-meanmenu-script', get_template_directory_uri() . '/third-party/meanmenu/jquery.meanmenu' . $min . '.js', array( 'jquery' ), '2.0.8', true );
 	wp_enqueue_script( 'simple-life-custom', get_template_directory_uri() . '/js/custom' . $min . '.js', array( 'jquery', 'simple-life-meanmenu-script' ), SIMPLE_LIFE_VERSION, true );
+
 	wp_localize_script(
 		'simple-life-custom',
 		'simpleLifeScreenReaderText',
