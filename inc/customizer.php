@@ -13,6 +13,9 @@
 function simple_life_customize_register( $wp_customize ) {
 	global $simple_life_default_options;
 
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
 	$wp_customize->selective_refresh->add_partial(
 		'blogname',
 		array(
