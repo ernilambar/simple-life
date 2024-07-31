@@ -1106,8 +1106,8 @@ footer#colophon a {
 .footer-nav-wrapper ul li a:hover {
 	text-decoration: none;
 }
-#copyright-wrap {
-	margin-bottom: 10px;
+#powered-by-wrap {
+	margin-top: 10px;
 }
 #footer_widgets_wrap {
 	padding: 0;
